@@ -14,7 +14,8 @@ autoload -Uz _zinit
 ### End of Zinit's installer chunk
 
 
-zinit ice depth=1; zinit light romkatv/powerlevel10k
+zinit ice depth=1;
+zinit light romkatv/powerlevel10k
 
 
 #############################################################################################
@@ -49,6 +50,7 @@ zinit light zdharma/history-search-multi-word
 ################################### supercrabtree/k #########################################
 #############################################################################################
 # Gitの変更状態がわかる ls。ls の代わりにコマンド `k` を実行するだけ。
+zinit ice wait lucid
 zinit light supercrabtree/k
 
 
@@ -66,11 +68,6 @@ zinit light paulirish/git-open
 # bat (見やすいcat)
 zinit ice as"program" from"gh-r" mv"bat* -> bat" pick"bat/bat"
 zinit light sharkdp/bat
-# ice: 次の行に対してオプションを付与する
-# as"program": zshのソースファイルではなく,コマンドとして扱う
-# from"gh-r": githubのリリースからダウンロードする
-# mv: ダウンロードしたものをリネームする
-# pick: pathを通すものの指定
 # エイリアス設定
 if builtin command -v bat > /dev/null; then
   alias cat="bat"
