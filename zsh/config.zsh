@@ -8,6 +8,9 @@ SAVEHIST=1000000            # 上述のファイルに保存する履歴のサ�
 setopt inc_append_history   # 実行時に履歴をファイルにに追加していく
 setopt share_history        # 履歴を他のシェルとリアルタイム共有する
 
+setopt hist_ignore_dups     # 直前の重複を記録しない
+
+
 #################################  COMPLEMENT  #################################
 # enable completion
 autoload -Uz compinit && compinit
@@ -23,9 +26,17 @@ zstyle ':completion:*' group-name ''
 ### 補完侯補をメニューから選択する。
 ### select=2: 補完候補を一覧から選択する。補完候補が2つ以上なければすぐに補完する。
 zstyle ':completion:*:default' menu select=2
+
+
 #################################  OTHERS  #################################
-# automatically change directory when dir name is typed
+# 環境変数
+export LANG=ja_JP.UTF-8
+
+# パスを直接入力してもcdする
 setopt auto_cd
 
 # disable ctrl+s, ctrl+q
 setopt no_flow_control
+
+## 日本語ファイルを扱えるようにする
+setopt print_eight_bit
