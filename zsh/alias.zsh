@@ -1,8 +1,16 @@
-###################### cd #######################
-alias ....='cd../../'
-alias ......='cd../../../'
+#################################################
+#################### basic ######################
+#################################################
+alias shell='echo $SHELL'
+alias path='echo $PATH'
+alias ....='cd ../../'
+alias ......='cd ../../../'
+alias wh='which'
+alias so='source'
 
+#################################################
 ###################### git ######################
+#################################################
 # basic
 alias g='git'
 # version
@@ -44,6 +52,8 @@ alias gdc='git diff --cached'
 alias gl='git log'
 alias glo='git log --oneline'
 alias glg='git log --graph --name-status --pretty=format:"%C(red)%h %C(green)%an %C(Cyan)%ad %Creset%s %C(yellow)%d%Creset"'
+# reflog
+alias gref='git reflog'
 # fetch
 alias gfu='git fetch upstream'7
 alias gfo='git fetch origin'
@@ -65,10 +75,19 @@ alias gsa='git stash apply'
 alias gsp='git stash pop'
 # reset
 alias grh='git reset HEAD' #ステージングにある全ファイルをワークツリーに戻す（ git add -A を取り消す）
+# show
+alias gsh='git show'
 
+#################################################
 ###################### vim ######################
+#################################################
 alias v='vim'
 alias vi='vim'
 
+#################################################
+##################### docker ####################
+#################################################
+alias d='docker'
+alias dc='docker-compose'
+
 alias mss='mysql.server start'
-alias so='source'
