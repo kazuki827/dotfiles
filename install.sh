@@ -1,27 +1,30 @@
-#!/bin/bash
+#!/bin/sh
+ln -sf ~/dotfiles/.vimrc ~/.vimrc
+ln -sf ~/dotfiles/.zshenv ~/.zshenv
+ln -sf ~/dotfiles/.zshrc ~/.zshrc
 
 # 未定義な変数があったら途中で終了する
-set -u
+# set -u
 
-# 今のディレクトリ
-# dotfilesディレクトリに移動する
-BASEDIR=$(dirname $0)
-cd $BASEDIR
+# # 今のディレクトリ
+# # dotfilesディレクトリに移動する
+# BASEDIR=$(dirname $0)
+# cd $BASEDIR
 
-echo "Create dotfile links..."
-for f in .??*
-do
-    [ "$f" = ".git" ] && continue
-    [ "$f" = ".gitconfig.local.template" ] && continue
-    [ "$f" = ".gitmodules" ] && continue
-    ln -snfv ${PWD}/"$f" ~/
-done
+# echo "Create dotfile links..."
+# for f in .??*
+# do
+#     [ "$f" = ".git" ] && continue
+#     [ "$f" = ".gitconfig.local.template" ] && continue
+#     [ "$f" = ".gitmodules" ] && continue
+#     ln -snfv ${PWD}/"$f" ~/
+# done
 
-cat << END
+# cat << END
 
-**************************************************
-DOTFILES SETUP FINISHED! bye.
-**************************************************
+# **************************************************
+# DOTFILES SETUP FINISHED! bye.
+# **************************************************
 
-END
+# END
 
