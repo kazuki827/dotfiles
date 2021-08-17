@@ -33,7 +33,7 @@ alias gbd='git branch -D'
 # checkout
 alias gco='git checkout'
 alias gcob='git checkout -b'
-alias gco.='git checkout .' # ワークツリーにある全ファイルの変更を取り消す
+alias gco.='git checkout .'
 alias gcom='git checkout master'
 alias gcod='git checkout develop'
 # grep
@@ -55,7 +55,7 @@ alias glg='git log --graph --name-status --pretty=format:"%C(red)%h %C(green)%an
 # reflog
 alias gref='git reflog'
 # fetch
-alias gfu='git fetch upstream'7
+alias gfu='git fetch upstream'
 alias gfo='git fetch origin'
 # merge
 alias gm='git merge'
@@ -69,14 +69,30 @@ alias gpo='git push origin'
 alias gpom='git push origin master'
 # stash
 alias gst='git stash'
-alias gsl='git stash list'
-alias gsu='git stash -u'
-alias gsa='git stash apply'
-alias gsp='git stash pop'
+alias gstl='git stash list'
+alias gstu='git stash -u'
+alias gsta='git stash apply'
+alias gstp='git stash pop'
+# rebase
+alias gre='git rebase'
+alias grei='git rebase -i'
 # reset
-alias grh='git reset HEAD' #ステージングにある全ファイルをワークツリーに戻す（ git add -A を取り消す）
+alias grth='git reset HEAD' #ステージングにある全ファイルをワークツリーに戻す（ git add -A を取り消す）
 # show
 alias gsh='git show'
+
+########## コミット自体なしにしたい時 ###########
+# [ 誰にも取り込まれていない場合 ]
+# 1.HEADだけを元に戻す
+alias grts='git reset --soft HEAD~'
+# 2.HEADとインデックスを元に戻す
+alias grt='git reset HEAD~'
+# 3.１つまえのコミットまでインデックス、ワーキングツリーも含めて元に戻す
+alias grth='git reset --hard HEAD~'
+
+# [ 誰かに取り込まれている場合] 
+# 打ち消しコミット
+# git revert <コミット>
 
 #################################################
 ###################### vim ######################
