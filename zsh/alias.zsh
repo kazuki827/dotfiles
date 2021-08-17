@@ -107,6 +107,8 @@ alias vi='vim'
 ##################### docker ####################
 #################################################
 alias d='docker'
+alias dp='docker ps'
+alias dpa='docker ps -a'
 alias dc='docker-compose'
 
 alias mss='mysql.server start'

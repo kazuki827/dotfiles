@@ -42,5 +42,5 @@ setopt nolistbeep           # ビープ音の停止(補完時)
 setopt no_flow_control      # disable ctrl+s, ctrl+q
 setopt print_eight_bit      # 日本語ファイルを表示可能にする
 setopt correct              # コマンドミスを修正
-setopt auto_param_keys      # カッコの対応などを自動的に補完する
-
+setopt auto_param_keys      # カッコ自動補完
+setopt auto_param_keys      # 環境変数を補完
