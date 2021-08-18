@@ -13,7 +13,7 @@ export SVN_EDITOR="${EDITOR}"
 ##  History
 ## ----------------------------------------
 HISTFILE=$HOME/.zsh-history # 履歴を保存するファイル
-HISTSIZE=1000               # メモリ上に保存する履歴のサイズ
+HISTSIZE=10000               # メモリ上に保存する履歴のサイズ
 SAVEHIST=1000000            # 上述のファイルに保存する履歴のサイズ
 setopt inc_append_history   # 実行時に履歴をファイルに追加
 setopt share_history        # 履歴を他のシェルとリアルタイム共有
@@ -52,7 +52,7 @@ setopt auto_param_keys      # 環境変数を補完
 
 # ghq & peco
 # [ https://qiita.com/strsk/items/9151cef7e68f0746820d ]
-function peco-src () {
+function peco-ghq () {
   local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
   if [ -n "$selected_dir" ]; then
     BUFFER="cd ${selected_dir}"
@@ -60,5 +60,5 @@ function peco-src () {
   fi
   zle clear-screen
 }
-zle -N peco-src
-bindkey '^]' peco-src
+zle -N peco-ghq
+bindkey '^]' peco-ghq
