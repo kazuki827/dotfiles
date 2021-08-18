@@ -1,0 +1,19 @@
+[user]
+	name = kazuki827
+	email = xm.kazuki827@gmail.com
+[core]
+	editor = vim -c \"set fenc=utf-8\"
+	excludesfile = /Users/matsudakazuki/.gitignore_global
+	quotepath = false
+	ignorecase = false
+[color]
+	ui = auto
+	diff = auto
+	status = auto
+	branch = auto
+[push]
+	default = current
+[commit]
+	template = /Users/matsudakazuki/.stCommitMsg
+[alias]
+  co = "!f() { args=$@; if [ -z \"$args\" ]; then branch=$(git branch --all | grep -v HEAD | fzf  --preview 'echo {} | cut -c 3- | xargs git log --color=always' | cut -c 3-); git checkout $(echo   $branch | sed 's#remotes/[^/]*/##'); else git checkout $args; fi }; f"
