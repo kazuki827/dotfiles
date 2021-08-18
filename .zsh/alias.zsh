@@ -62,11 +62,12 @@ alias gfo='git fetch origin'
 # pull
 alias gpl='git pull'
 alias gplo='git pull origin'
-alias gplom='git pull origin'
+alias gplom='git pull origin master'
 alias gplod='git pull origin develop'
 alias gplr='git pull --rebase'
 alias gplro='git pull --rebase origin'
 alias gplrom='git pull --rebase origin master'
+alias gplrod='git pull --rebase origin develop'
 # merge
 alias gm='git merge'
 alias gma='git merge --abort'
