@@ -14,6 +14,8 @@ brew upgrade --all
 
 formulas=(
     git
+    ghq
+    peco
     wget
     curl
     tree
@@ -23,7 +25,6 @@ formulas=(
     "--without-etcdir zsh"
     cask
     ansible
-    peco
     hub
     tig
     node

@@ -1,3 +1,9 @@
-export LANG=ja_JP.UTF-8
-export LC_ALL=ja_JP.UTF-8
+## ----------------------------------------
+##  Language
+## ----------------------------------------
+export LANGUAGE="en_US.UTF-8"
+export LANG="${LANGUAGE}"
+export LC_ALL="${LANGUAGE}"
+export LC_CTYPE="${LANGUAGE}"
+
 export PATH=/usr/local/bin:$PATH
