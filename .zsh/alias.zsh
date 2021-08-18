@@ -49,7 +49,7 @@ alias gcm='git commit -m'
 alias gca='git commit --amend'
 # diff
 alias gd='git diff'
-alias gdc='git diff --cached'
+alias gds='git diff --staged'
 #log
 alias gl='git log'
 alias glo='git log --oneline'
@@ -59,6 +59,8 @@ alias gref='git reflog'
 # fetch
 alias gfu='git fetch upstream'
 alias gfo='git fetch origin'
+alias gfom='git fetch origin master'
+alias gfod='git fetch origin develop'
 # pull
 alias gpl='git pull'
 alias gplo='git pull origin'
@@ -97,7 +99,7 @@ alias gsh='git show'
 # 1.HEADだけを元に戻す
 alias grts='git reset --soft HEAD~'
 # 2.HEADとインデックスを元に戻す
-alias grt='git reset --mixed HEAD~'
+alias grtm='git reset --mixed HEAD~'
 # 3.１つまえのコミットまでインデックス、ワーキングツリーも含めて元に戻す
 alias grth='git reset --hard HEAD~'
 
