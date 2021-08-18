@@ -1,10 +1,6 @@
 #$PATH の重複をなくす
 typeset -U path cdpath fpath manpath
 
-#################################  EXPORT  #################################
-export LANG=ja_JP.UTF-8     # 文字コード指定
-
-
 #################################  HISTORY  ################################
 HISTFILE=$HOME/.zsh-history # 履歴を保存するファイル
 HISTSIZE=1000               # メモリ上に保存する履歴のサイズ
