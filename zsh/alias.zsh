@@ -58,6 +58,11 @@ alias gref='git reflog'
 # fetch
 alias gfu='git fetch upstream'
 alias gfo='git fetch origin'
+# pull
+alias gpl='git pull'
+alias gplo='git pull origin'
+alias gplom='git pull origin'
+alias gplod='git pull origin develop'
 # merge
 alias gm='git merge'
 alias gma='git merge --abort'
