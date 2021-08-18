@@ -96,7 +96,7 @@ alias gsh='git show'
 # 1.HEADだけを元に戻す
 alias grts='git reset --soft HEAD~'
 # 2.HEADとインデックスを元に戻す
-alias grt='git reset HEAD~'
+alias grt='git reset --mixed HEAD~'
 # 3.１つまえのコミットまでインデックス、ワーキングツリーも含めて元に戻す
 alias grth='git reset --hard HEAD~'
 
