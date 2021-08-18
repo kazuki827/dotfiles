@@ -112,3 +112,13 @@ alias dpa='docker ps -a'
 alias dc='docker-compose'
 
 alias mss='mysql.server start'
+
+
+#################################################
+################ supercrabtree/k ################
+#################################################
+alias k='k -a'
+# list only directories
+alias kd='k -d'
+# do not list directories
+alias knd='k -n'
