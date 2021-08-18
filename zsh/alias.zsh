@@ -17,8 +17,9 @@ alias g='git'
 # version
 alias gv='git version'
 # config
-alias gconf='git config --list'
-alias gconfe='git config --global --edit'
+alias gconfl='git config --list'
+alias gconfgl='git config --global --list'
+alias gconfge='git config --global --edit'
 # init 
 alias gi='git init'
 # remote
