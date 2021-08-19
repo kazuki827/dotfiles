@@ -613,10 +613,8 @@
 				<key>Red Component</key>
 				<real>0.11765811592340469</real>
 			</dict>
-			<key>Background Image Location</key>
-			<string></string>
 			<key>Background Image Mode</key>
-			<integer>0</integer>
+			<integer>2</integer>
 			<key>Badge Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -630,6 +628,8 @@
 				<key>Red Component</key>
 				<real>1</real>
 			</dict>
+			<key>Blend</key>
+			<real>0.2208221275768979</real>
 			<key>Blink Allowed</key>
 			<false/>
 			<key>Blinking Cursor</key>
@@ -1091,7 +1091,7 @@
 			<key>Thin Strokes</key>
 			<integer>4</integer>
 			<key>Transparency</key>
-			<real>0.134976385057587</real>
+			<real>0.085971698564352453</real>
 			<key>Unicode Normalization</key>
 			<integer>0</integer>
 			<key>Unlimited Scrollback</key>
