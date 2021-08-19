@@ -7,6 +7,7 @@ alias ....='cd ../../'
 alias ......='cd ../../../'
 alias wh='which'
 alias so='source'
+alias soz='source ~/.zshrc'
 
 
 #################################################
@@ -17,6 +18,7 @@ alias g='git'
 # version
 alias gv='git version'
 # config
+alias gconf='git config'
 alias gconfl='git config --list'
 alias gconfgl='git config --global --list'
 alias gconfge='git config --global --edit'
