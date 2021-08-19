@@ -45,19 +45,15 @@ set editor-line-number = yes
 set diff-highlight = true
 
 # カラー設定
-# diff-view で境界が見やすくなるように変更
-# color  diff-header       default magenta
-# color  diff-chunk        black   white
-
-# Visualization
-# set id-width = 8
-# set blame-options = -C -C -C
-# set horizontal-scroll = 33%
-# set show-notes = yes
-# set show-changes = yes
-# 
-# set status-show-untracked-dirs = yes
-# set diff-context = 3
-# set commit-order = topo
-# set wrap-lines = yes
-# set focus-child = yes
+color default white black
+color cursor default yellow white
+color status white green bold
+color date cyan default
+color delimiter cyan default
+color line-number yellow default
+color diff-header yellow default
+color diff-index cyan default
+color diff-chunk magenta default
+color diff-stat cyan default
+color "Reported-by:" green default
+color graph-commit cyan default
