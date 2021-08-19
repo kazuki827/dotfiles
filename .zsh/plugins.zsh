@@ -59,11 +59,13 @@ zinit light supercrabtree/k
 zinit ice wait lucid
 zinit light paulirish/git-open
 
+
 ## ----------------------------------------
 ##  cd-gitroot
 ## ----------------------------------------
 zinit ice wait lucid
 zinit light mollifier/cd-gitroot
+
 
 ## ----------------------------------------
 ##  bat

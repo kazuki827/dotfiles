@@ -16,6 +16,7 @@ formulas=(
     git
     ghq
     fzf
+    exa
     wget
     curl
     tree

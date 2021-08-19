@@ -136,6 +136,12 @@ alias mss='mysql.server start'
 
 
 ## ----------------------------------------
+##  exa
+## ----------------------------------------
+alias ll='exa -l -aa -h -@ -m --icons --git --time-style=long-iso --color=automatic --group-directories-first'
+
+
+## ----------------------------------------
 ##  supercrabtree/k
 ## ----------------------------------------
 alias k='k -a'
@@ -143,6 +149,7 @@ alias k='k -a'
 alias kd='k -d'
 # do not list directories
 alias knd='k -n'
+
 
 ## ----------------------------------------
 ##  cd-gitroot
