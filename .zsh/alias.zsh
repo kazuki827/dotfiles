@@ -8,6 +8,8 @@ alias ......='cd ../../../'
 alias wh='which'
 alias so='source'
 alias soz='source ~/.zshrc'
+# shell 再起動
+alias relog='exec $SHELL -l'
 
 
 ## ----------------------------------------
