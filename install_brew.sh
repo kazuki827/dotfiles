@@ -15,7 +15,6 @@ brew upgrade --all
 formulas=(
     git
     ghq
-    peco
     fzf
     wget
     curl
@@ -27,7 +26,6 @@ formulas=(
     cask
     ansible
     hub
-    tig
     node
     python3
     lua

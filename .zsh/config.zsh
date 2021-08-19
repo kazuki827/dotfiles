@@ -50,27 +50,16 @@ setopt auto_param_keys      # カッコ自動補完
 setopt auto_param_keys      # 環境変数を補完
 
 
-# ghq & peco
-# [ https://qiita.com/strsk/items/9151cef7e68f0746820d ]
-function peco-ghq () {
-  local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
-  if [ -n "$selected_dir" ]; then
-    BUFFER="cd ${selected_dir}"
+## ----------------------------------------
+##  ghq & fzf
+## ----------------------------------------
+function ghq-fzf() {
+  local src=$(ghq list | fzf --preview "ls -laTp $(ghq root)/{} | tail -n+4 | awk '{print \$9\"/\"\$6\"/\"\$7 \" \" \$10}'")
+  if [ -n "$src" ]; then
+    BUFFER="cd $(ghq root)/$src"
     zle accept-line
   fi
-  zle clear-screen
+  zle -R -c
 }
-zle -N peco-ghq
-bindkey '^]' peco-ghq
-
-### cd ghq project
-# function ghq-fzf() {
-#   local src=$(ghq list | fzf --layout=reverse --preview "bat --color=always --style=header,grid --line-range :80 $(ghq root)/{}/(README|readme).*")
-#   if [ -n "$src" ]; then
-#     BUFFER="cd $(ghq root)/$src"
-#     zle accept-line
-#   fi
-#   zle -R -c
-# }
-# zle -N ghq-fzf
-# bindkey '^]' ghq-fzf 
+zle -N ghq-fzf
+bindkey '^]' ghq-fzf
