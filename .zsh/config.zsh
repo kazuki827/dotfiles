@@ -48,18 +48,3 @@ setopt print_eight_bit      # 日本語ファイルを表示可能にする
 setopt correct              # コマンドミスを修正
 setopt auto_param_keys      # カッコ自動補完
 setopt auto_param_keys      # 環境変数を補完
-
-
-## ----------------------------------------
-##  ghq & fzf
-## ----------------------------------------
-function ghq-fzf() {
-  local src=$(ghq list | fzf --preview "ls -laTp $(ghq root)/{} | tail -n+4 | awk '{print \$9\"/\"\$6\"/\"\$7 \" \" \$10}'")
-  if [ -n "$src" ]; then
-    BUFFER="cd $(ghq root)/$src"
-    zle accept-line
-  fi
-  zle -R -c
-}
-zle -N ghq-fzf
-bindkey '^]' ghq-fzf
