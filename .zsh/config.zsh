@@ -1,6 +1,7 @@
 #$PATH の重複をなくす
 typeset -U path cdpath fpath manpath
 
+
 ## ----------------------------------------
 ##  Editor
 ## ----------------------------------------
@@ -8,6 +9,7 @@ export EDITOR=vim
 export CVSEDITOR="${EDITOR}"
 export GIT_EDITOR="${EDITOR}"
 export SVN_EDITOR="${EDITOR}"
+
 
 ## ----------------------------------------
 ##  History
@@ -23,6 +25,7 @@ setopt hist_ignore_all_dups # 入力したコマンドがすでにコマンド�
 setopt hist_reduce_blanks   # historyに保存するときに余分なスペースを削除
 setopt hist_expand          # 補完時にヒストリを自動的に展開
 
+
 ## ----------------------------------------
 ##  Complement
 ## ----------------------------------------
@@ -35,6 +38,7 @@ zstyle ':completion:*' group-name ''
 ### 補完侯補をメニューから選択する。
 ### select=2: 補完候補を一覧から選択する。補完候補が2つ以上なければすぐに補完する。
 zstyle ':completion:*:default' menu select=2
+
 
 ## ----------------------------------------
 ##  Option
