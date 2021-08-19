@@ -62,3 +62,15 @@ function peco-ghq () {
 }
 zle -N peco-ghq
 bindkey '^]' peco-ghq
+
+### cd ghq project
+# function ghq-fzf() {
+#   local src=$(ghq list | fzf --layout=reverse --preview "bat --color=always --style=header,grid --line-range :80 $(ghq root)/{}/(README|readme).*")
+#   if [ -n "$src" ]; then
+#     BUFFER="cd $(ghq root)/$src"
+#     zle accept-line
+#   fi
+#   zle -R -c
+# }
+# zle -N ghq-fzf
+# bindkey '^]' ghq-fzf 
