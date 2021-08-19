@@ -143,3 +143,8 @@ alias k='k -a'
 alias kd='k -d'
 # do not list directories
 alias knd='k -n'
+
+## ----------------------------------------
+##  cd-gitroot
+## ----------------------------------------
+alias cdgr='cd-gitroot'
