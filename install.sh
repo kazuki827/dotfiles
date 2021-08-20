@@ -5,6 +5,7 @@ ln -sf ~/dotfiles/.zshrc ~/.zshrc
 ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/.tigrc ~/.tigrc
+ln -sf ~/dotfiles/.dein ~/.dein
 
 # 未定義な変数があったら途中で終了する
 # set -u

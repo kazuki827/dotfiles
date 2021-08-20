@@ -532,12 +532,16 @@
 			</dict>
 			<key>Ansi 2 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<string>0.02352941</string>
+				<real>0.2628631591796875</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<string>0.6039215999999999</string>
+				<real>1</real>
 				<key>Red Component</key>
-				<string>0.3058824</string>
+				<real>0.67219576955597593</real>
 			</dict>
 			<key>Ansi 3 Color</key>
 			<dict>
@@ -563,12 +567,16 @@
 			</dict>
 			<key>Ansi 5 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<string>0.4823529</string>
+				<real>0.98741865158081055</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<string>0.3137255</string>
+				<real>0.6929274346089187</real>
 				<key>Red Component</key>
-				<string>0.4588235</string>
+				<real>0.95117189272378844</real>
 			</dict>
 			<key>Ansi 6 Color</key>
 			<dict>
@@ -1041,7 +1049,7 @@
 				<real>0.0</real>
 			</dict>
 			<key>Minimum Contrast</key>
-			<real>0.0</real>
+			<real>0.59824755012644504</real>
 			<key>Mouse Reporting</key>
 			<true/>
 			<key>Name</key>
