@@ -138,7 +138,7 @@ alias mss='mysql.server start'
 ## ----------------------------------------
 ##  exa
 ## ----------------------------------------
-alias ll='exa -l -aa -h -@ -m --icons --git --time-style=long-iso --color=automatic --group-directories-first'
+alias l='exa -l -aa -h -@ -m --icons --git --time-style=long-iso --color=automatic --group-directories-first'
 
 
 ## ----------------------------------------
