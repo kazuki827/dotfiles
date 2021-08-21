@@ -118,13 +118,8 @@ alias grth='git reset --hard HEAD~'
 alias n='npm'
 alias ni='npm install'
 alias ns='npm run start'
-alias nd='npm run dev'
-
-
-## ----------------------------------------
-##  tmux
-## ----------------------------------------
-alias tm='tmux'
+alias tmka='tmux kill-server'
+alias tmks='tmux kill-session -t'
 
 
 ## ----------------------------------------
