@@ -1,6 +1,7 @@
 ## ----------------------------------------
 ##  Prompt
 ##  - Must be the top of .zshrc.
+#   -r -> file が存在し、かつ読み込み可能ならば真
 ## ----------------------------------------
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
