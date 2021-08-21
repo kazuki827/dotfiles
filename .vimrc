@@ -1,14 +1,15 @@
-" シェルを指定
+"--------------------------------------------------------------
+" shell
+"--------------------------------------------------------------
 set shell=/usr/local/bin/zsh
 
-" encoding
-set encoding=utf8
-scriptencoding utf8
-set fileencoding=utf-8
-set termencoding=utf8
-set fileencodings=utf-8,ucs-boms,euc-jp,ep932
-set fileformats=unix,dos,mac
-set ambiwidth=double
+
+"--------------------------------------------------------------
+" base
+"--------------------------------------------------------------
+" 行番号を表示
+set number
+
 set nobomb
 set t_Co=256
 
@@ -21,33 +22,152 @@ set clipboard=unnamed
 " ビープ音を消す
 set belloff=all
 
-" 行番号系
-set number
-
 " タイトル系
 set title
 
-" インデント系
-filetype plugin indent on
+
+"--------------------------------------------------------------
+" encoding
+"--------------------------------------------------------------
+" ファイル読み込み時の文字コード
+set encoding=utf8
+
+" Vim script内でマルチバイト文字を使う場合の設定
+scriptencoding utf8
+
+" 保存時の文字コード
+set fileencoding=utf-8
+
+" 
+set termencoding=utf8
+
+" 読み込み時の文字コードの自動判別. 左側が優先
+set fileencodings=utf-8,ucs-boms,euc-jp,ep932
+
+" 改行コードの自動判別. 左側が優先
+set fileformats=unix,dos,mac
+
+" □や○文字が崩れる問題を解決
+set ambiwidth=double
+
+
+"--------------------------------------------------------------
+" tab indent
+"--------------------------------------------------------------
+" タブ入力を複数の空白入力に置き換える
 set expandtab
+
+" 画面上でタブ文字が占める幅
 set tabstop=2
+
+" 連続した空白に対してタブキーやバックスペースキーでカーソルが動く幅
 set softtabstop=2
+
+" 改行時に前の行のインデントを継続する
 set autoindent
+
+" 改行時に前の行の構文をチェックし次の行のインデントを増減する
 set smartindent
+
+" smartindentで増減する幅
 set shiftwidth=2
-au FileType go setlocal sw=4 ts=4 sts=4 noet
-set list listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+
+
+"--------------------------------------------------------------
+" string search
+"--------------------------------------------------------------
+" インクリメンタルサーチ. １文字入力毎に検索を行う
+set incsearch
+
+" 検索パターンに大文字小文字を区別しない
+set ignorecase
+
+" 検索パターンに大文字を含んでいたら大文字小文字を区別する
+set smartcase
+
+"  検索結果をハイライト
+set hlsearch
+
+" ESCキー2度押しでハイライトの切り替え
+nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
+
+
+"--------------------------------------------------------------
+" cursor
+"--------------------------------------------------------------
+" カーソルの左右移動で行末から次の行の行頭への移動が可能になる
+set whichwrap=b,s,h,l,<,>,[,],~
+
+" カーソルラインをハイライト
+set cursorline
+
+" 行が折り返し表示されていた場合、行単位ではなく表示行単位でカーソルを移動する
+nnoremap j gj
+nnoremap k gk
+nnoremap <down> gj
+nnoremap <up> gk
 
 " 挿入モードでバックスペース削除を有効
 set backspace=indent,eol,start
 
-" 検索するときに大文字小文字を区別しない
-set ignorecase
 
-" 検索した時にハイライト
-set hlsearch
+"--------------------------------------------------------------
+" brackets / tag jump
+"--------------------------------------------------------------
+" 括弧の対応関係を一瞬表示する
+set showmatch
 
-" キーバインド------------------------------------------------------------------
+" Vimの「%」を拡張する
+" HTMLタグやRubyのdef...endなども%で対応するタグにジャンプ可
+source $VIMRUNTIME/macros/matchit.vim
+
+
+"--------------------------------------------------------------
+" command completion
+"--------------------------------------------------------------
+" コマンドモードの補完
+set wildmenu
+
+" 保存するコマンド履歴の数
+set history=5000
+
+
+"--------------------------------------------------------------
+" mouse activation
+"--------------------------------------------------------------
+if has('mouse')
+    set mouse=a
+    if has('mouse_sgr')
+        set ttymouse=sgr
+    elseif v:version > 703 || v:version is 703 && has('patch632')
+        set ttymouse=sgr
+    else
+        set ttymouse=xterm2
+    endif
+endif
+
+
+"--------------------------------------------------------------
+" paste
+"--------------------------------------------------------------
+" クリップボードからペーストする時だけインデントしない設定
+if &term =~ "xterm"
+    let &t_SI .= "\e[?2004h"
+    let &t_EI .= "\e[?2004l"
+    let &pastetoggle = "\e[201~"
+
+    function XTermPasteBegin(ret)
+        set paste
+        return a:ret
+    endfunction
+
+    inoremap <special> <expr> <Esc>[200~ XTermPasteBegin("")
+endif
+
+
+"------------------------------------------------------------------
+" key binding
+"------------------------------------------------------------------
 
 " xで削除した時はヤンクしない
 vnoremap x "_x
@@ -84,7 +204,9 @@ nnoremap ss :<C-u>sp<CR><C-w>j
 nnoremap sv :<C-u>vs<CR><C-w>l
 
 
-" plugin manager ---------------------------------------------
+"--------------------------------------------------------------
+" plugin setting (dein)
+"--------------------------------------------------------------
 if &compatible
   set nocompatible
 endif
@@ -103,14 +225,14 @@ if &runtimepath !~# '/dein.vim'
   execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
 endif
 
-" tomlセット
-let s:toml_dir=expand('~/.dein/')
-let s:toml=s:toml_dir . 'dein.toml'
-let s:toml_lazy=s:toml_dir . 'dein-lazy.toml'
-
 " プラグインのロード
 if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
+
+  " tomlセット
+  let s:toml_dir   = expand('~/dotfiles/.vim/.dein/')
+  let s:toml       = s:toml_dir . 'dein.toml'
+  let s:toml_lazy  = s:toml_dir . 'dein-lazy.toml'
 
   " TOML を読み込み、キャッシュしておく
   call dein#load_toml(s:toml     , {'lazy': 0})
@@ -126,26 +248,4 @@ if dein#check_install()
   call dein#install()
 endif
 
-" ------------------------------------------------------------
 
-" カラースキーム(任意です)
-if (empty($TMUX))
-  if (has("nvim"))
-    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  endif
-  if (has("termguicolors"))
-    set termguicolors
-  endif
-endif
-
-syntax on
-
-" , キーで次タブのバッファを表示
-nnoremap <silent> , :bprev<CR>
-" . キーで前タブのバッファを表示
-nnoremap <silent> . :bnext<CR>
-" bdで現在のバッファを削除
-nnoremap bd :bd<CR>
-
-" <Leader>キー
-let mapleader = " "

@@ -1,11 +1,16 @@
 [[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
 repo = 'scrooloose/nerdtree'
 hook_add = '''
-  let NERDTreeShowHidden=1
+    let NERDTreeShowHidden=1
     nnoremap <silent><C-a> :NERDTreeFind<CR>:vertical res 30<CR>
 '''
+
 [[plugins]]
 repo = 'vim-airline/vim-airline'
+
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
 depends = 'vim-airline'
@@ -15,6 +20,7 @@ hook_add = '''
     let g:airline#extensions#tabline#buffer_idx_mode = 1
     let g:airline#extensions#tabline#fnamemod = ':t'
 '''
+
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
 hook_add = '''
@@ -26,35 +32,39 @@ hook_add = '''
     highlight GitGutterDelete ctermfg=red
     highlight GitGutterChangeDelete ctermfg=yellow
 '''
+
 [[plugins]]
 repo = 'tomtom/tcomment_vim'
 hook_add = '''
     vnoremap ? :'<,'>TComment<CR>
 '''
+
 [[plugins]]
 repo = 'luochen1990/rainbow'
 hook_add = '''
     let g:rainbow_active = 1
 '''
+
 [[plugins]]
 repo = 'alvan/vim-closetag'
 on_ft = ['html', 'xhtml', 'javascript', 'typescript', 'javascript.jsx', 'typescript.tsx']
 hook_add = '''
-  let g:closetag_filenames='*.html'
-  let g:closetag_xhtml_filenames='*.jsx,*.tsx,*.vue'
-  let g:closetag_filetypes='html'
-  let g:closetag_xhtml_filetypes='jsx,tsx,javascript.jsx,typescript.tsx,vue'
-  let g:closetag_emptyTags_caseSensitive=1
-  let g:closetag_shortcut='>'
+    let g:closetag_filenames='*.html'
+    let g:closetag_xhtml_filenames='*.jsx,*.tsx,*.vue'
+    let g:closetag_filetypes='html'
+    let g:closetag_xhtml_filetypes='jsx,tsx,javascript.jsx,typescript.tsx,vue'
+    let g:closetag_emptyTags_caseSensitive=1
+    let g:closetag_shortcut='>'
 '''
+
 [[plugins]]
 repo = 'ryanoasis/vim-devicons'
 
 [[plugins]]
 repo = 'easymotion/vim-easymotion'
 hook_add = '''
-   nmap <Leader> <Plug>(easymotion-prefix)
-   nmap <Leader>w <Plug>(easymotion-jumptoanywhere) # 全画面移動
-   nmap <Leader>jk <Plug>(easymotion-sol-bd-jk) # 行頭移動
-   nmap <Leader>s <Plug>(easymotion-s2) # 全画面検索移動
+    nmap <Leader> <Plug>(easymotion-prefix)
+    nmap <Leader>w <Plug>(easymotion-jumptoanywhere) # 全画面移動
+    nmap <Leader>jk <Plug>(easymotion-sol-bd-jk) # 行頭移動
+    nmap <Leader>s <Plug>(easymotion-s2) # 全画面検索移動
 '''
