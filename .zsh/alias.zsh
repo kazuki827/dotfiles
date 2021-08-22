@@ -125,7 +125,7 @@ alias nd='npm run dev'
 ## ----------------------------------------
 alias tm='tmux'
 alias tml='tmux ls'
-alias tmns='tmux new -s'
+alias tmn='tmux new -s'
 alias tma='tmux a -t'
 alias tmka='tmux kill-server'
 alias tmks='tmux kill-session -t'
