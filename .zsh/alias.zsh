@@ -124,6 +124,8 @@ alias nd='npm run dev'
 ##  tmux
 ## ----------------------------------------
 alias tm='tmux'
+alias tml='tmux ls'
+alias tma='tmux a -t'
 alias tmka='tmux kill-server'
 alias tmks='tmux kill-session -t'
 
@@ -154,8 +156,6 @@ alias d='docker'
 alias dp='docker ps'
 alias dpa='docker ps -a'
 alias dc='docker-compose'
-
-alias mss='mysql.server start'
 
 
 ## ----------------------------------------
