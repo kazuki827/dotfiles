@@ -120,6 +120,16 @@ alias ni='npm install'
 alias ns='npm run start'
 alias nd='npm run dev'
 
+
+## ----------------------------------------
+##  yarn
+## ----------------------------------------
+alias y='yarn'
+alias ya='npm add'
+alias ys='npm start'
+alias yd='npm dev'
+
+
 ## ----------------------------------------
 ##  tmux
 ## ----------------------------------------

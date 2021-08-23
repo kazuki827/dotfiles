@@ -15,7 +15,7 @@ export SVN_EDITOR="${EDITOR}"
 ##  History
 ## ----------------------------------------
 HISTFILE=$HOME/.zsh-history # 履歴を保存するファイル
-HISTSIZE=10000               # メモリ上に保存する履歴のサイズ
+HISTSIZE=10000              # メモリ上に保存する履歴のサイズ
 SAVEHIST=1000000            # 上述のファイルに保存する履歴のサイズ
 setopt inc_append_history   # 実行時に履歴をファイルに追加
 setopt share_history        # 履歴を他のシェルとリアルタイム共有
