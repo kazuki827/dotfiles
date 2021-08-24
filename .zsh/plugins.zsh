@@ -27,7 +27,7 @@ zinit light romkatv/powerlevel10k
 ## ----------------------------------------
 zinit ice wait lucid
 zinit light zsh-users/zsh-autosuggestions
-bindkey '^j' autosuggest-accept
+bindkey '^g' autosuggest-accept
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ffff00"
 
 
