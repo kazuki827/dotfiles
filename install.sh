@@ -6,6 +6,9 @@ ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/.tigrc ~/.tigrc
 ln -sf ~/dotfiles/.dein ~/.dein
+ln -sf ~/dotfiles/.ranger/rc.conf ~/.config/ranger
+ln -sf ~/dotfiles/.ranger/rifile.conf ~/.config/ranger
+ln -sf ~/dotfiles/.ranger/scope.sh ~/.config/ranger
 
 # 未定義な変数があったら途中で終了する
 # set -u

@@ -3,6 +3,7 @@
 ## ----------------------------------------
 alias shell='echo $SHELL'
 alias path='echo $PATH'
+alias c='clear'
 alias ....='cd ../../'
 alias ......='cd ../../../'
 alias wh='which'
@@ -139,6 +140,14 @@ alias tmn='tmux new -s'
 alias tma='tmux a -t'
 alias tmka='tmux kill-server'
 alias tmks='tmux kill-session -t'
+
+
+## ----------------------------------------
+##  ranger
+## ----------------------------------------
+alias r='ranger'
+alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+
 
 
 ## ----------------------------------------
