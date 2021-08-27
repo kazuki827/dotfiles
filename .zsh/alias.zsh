@@ -94,6 +94,8 @@ alias gstp='git stash pop'
 # rebase
 alias gre='git rebase'
 alias grei='git rebase -i'
+alias grea='git rebase --abort'
+alias grec='git rebase --continue'
 # reset
 alias grth='git reset HEAD' #ステージングにある全ファイルをワークツリーに戻す（ git add -A を取り消す）
 # show
