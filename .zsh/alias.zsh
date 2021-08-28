@@ -120,6 +120,7 @@ alias grth='git reset --hard HEAD~'
 ## ----------------------------------------
 alias n='npm'
 alias ni='npm install'
+alias nid='npm install --save-dev'
 alias ns='npm run start'
 alias nd='npm run dev'
 
@@ -128,9 +129,10 @@ alias nd='npm run dev'
 ##  yarn
 ## ----------------------------------------
 alias y='yarn'
-alias ya='npm add'
-alias ys='npm start'
-alias yd='npm dev'
+alias ya='yarn add'
+alias ya='yarn add --dev'
+alias ys='yarn start'
+alias yd='yarn dev'
 
 
 ## ----------------------------------------
@@ -161,6 +163,12 @@ alias t='tig'
 ##  ghq
 ## ----------------------------------------
 alias ghg='ghq get'
+
+
+## ----------------------------------------
+##  git-open
+## ----------------------------------------
+alias go='git open'
 
 
 ## ----------------------------------------
