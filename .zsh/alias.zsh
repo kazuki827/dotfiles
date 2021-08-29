@@ -121,6 +121,7 @@ alias grth='git reset --hard HEAD~'
 alias n='npm'
 alias ni='npm install'
 alias nid='npm install --save-dev'
+alias nui='npm uninstall'
 alias ns='npm run start'
 alias nd='npm run dev'
 
