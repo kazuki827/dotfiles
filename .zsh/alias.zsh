@@ -87,10 +87,17 @@ alias gpo='git push origin'
 alias gpom='git push origin master'
 # stash
 alias gst='git stash'
+# 退避にコメント
+alias gsts='git stash save'
 alias gstl='git stash list'
+# untracked fileも含めて変更差分を退避
 alias gstu='git stash -u'
 alias gsta='git stash apply'
 alias gstp='git stash pop'
+# stash削除
+alias gstd='git stash drop'
+# すべてのstash削除
+alias gstc='git stash clear'
 # rebase
 alias gre='git rebase'
 alias grei='git rebase -i'
