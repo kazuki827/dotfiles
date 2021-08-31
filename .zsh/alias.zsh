@@ -27,6 +27,7 @@ alias gconf='git config'
 alias gconfl='git config --list'
 alias gconfgl='git config --global --list'
 alias gconfge='git config --global --edit'
+
 # init 
 alias gi='git init'
 
@@ -106,9 +107,9 @@ alias gpom='git push origin master'
 alias gst='git stash'
 # 退避にコメント
 alias gsts='git stash save'
-alias gstl='git stash list'
 # untracked fileも含めて変更差分を退避
 alias gstu='git stash -u'
+alias gstl='git stash list'
 alias gsta='git stash apply'
 alias gstp='git stash pop'
 # stash削除
@@ -123,22 +124,27 @@ alias grea='git rebase --abort'
 alias grec='git rebase --continue'
 
 # reset
-alias grta='git reset HEAD' #ステージングにある全ファイルをワークツリーに戻す（ git add -A を取り消す）
-# コミット自体なしにしたい時
-# [ 誰にも取り込まれていない場合 ]
-# 1.HEADだけを元に戻す
+# git add 取り消し
+alias grta='git reset --mixed HEAD'
+# commit 取り消し
+# HEADだけを元に戻す
 alias grts='git reset --soft HEAD~'
-# 2.HEADとインデックスを元に戻す
+# HEADとインデックスを元に戻す
 alias grtm='git reset --mixed HEAD~'
-# 3.１つまえのコミットまでインデックス、ワーキングツリーも含めて元に戻す
+# インデックス、ワーキングツリーも含めて元に戻す
 alias grth='git reset --hard HEAD~'
-# [ 誰かに取り込まれている場合] 
-# 打ち消しコミット
+# 直前のリセットを取り消し(c = cancel)
+alias grtc =  'git reset --hard ORIG_HEAD'
+
 # git revert <コミット>
 alias grev='git revert'
 
 # show
 alias gsh='git show'
+
+# メモ
+# @ は HEAD のエイリアス
+# HEAD^^^  =  HEAD~3  =  HEAD~~~  =  HEAD~{3}  =  @^^^
 
 
 ## ----------------------------------------
@@ -157,7 +163,8 @@ alias nd='npm run dev'
 ## ----------------------------------------
 alias y='yarn'
 alias ya='yarn add'
-alias ya='yarn add --dev'
+alias yad='yarn add --dev'
+alias yr='yarn remove'
 alias ys='yarn start'
 alias yd='yarn dev'
 
