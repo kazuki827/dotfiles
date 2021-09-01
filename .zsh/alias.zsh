@@ -134,7 +134,7 @@ alias grtm='git reset --mixed HEAD~'
 # インデックス、ワーキングツリーも含めて元に戻す
 alias grth='git reset --hard HEAD~'
 # 直前のリセットを取り消し(c = cancel)
-alias grtc =  'git reset --hard ORIG_HEAD'
+alias grtc='git reset --hard ORIG_HEAD'
 
 # git revert <コミット>
 alias grev='git revert'
