@@ -9,8 +9,7 @@ alias ......='cd ../../../'
 alias wh='which'
 alias so='source'
 alias soz='source ~/.zshrc'
-# shell 再起動
-alias relog='exec $SHELL -l'
+alias relog='exec $SHELL -l'  # shell 再起動
 
 
 ## ----------------------------------------
@@ -105,17 +104,13 @@ alias gpom='git push origin master'
 
 # stash
 alias gst='git stash'
-# 退避にコメント
-alias gsts='git stash save'
-# untracked fileも含めて変更差分を退避
-alias gstu='git stash -u'
+alias gsts='git stash save'  # 退避にコメント
+alias gstu='git stash -u'  # untracked fileも含めて変更差分を退避
 alias gstl='git stash list'
 alias gsta='git stash apply'
 alias gstp='git stash pop'
-# stash削除
-alias gstd='git stash drop'
-# すべてのstash削除
-alias gstc='git stash clear'
+alias gstd='git stash drop'  # stash削除
+alias gstc='git stash clear'  # すべてのstash削除
 
 # rebase
 alias gre='git rebase'
@@ -124,17 +119,12 @@ alias grea='git rebase --abort'
 alias grec='git rebase --continue'
 
 # reset
-# git add 取り消し
-alias grta='git reset --mixed HEAD'
+alias grta='git reset --mixed HEAD'  # git add 取り消し
 # commit 取り消し
-# HEADだけを元に戻す
-alias grts='git reset --soft HEAD~'
-# HEADとインデックスを元に戻す
-alias grtm='git reset --mixed HEAD~'
-# インデックス、ワーキングツリーも含めて元に戻す
-alias grth='git reset --hard HEAD~'
-# 直前のリセットを取り消し(c = cancel)
-alias grtc='git reset --hard ORIG_HEAD'
+alias grts='git reset --soft HEAD~'  # HEADだけを元に戻す
+alias grtm='git reset --mixed HEAD~'  # HEADとインデックスを元に戻す
+alias grth='git reset --hard HEAD~'  # インデックス、ワーキングツリーも含めて元に戻す
+alias grtc='git reset --hard ORIG_HEAD'  # 直前のリセットを取り消し(c = cancel)
 
 # git revert <コミット>
 alias grev='git revert'
@@ -167,6 +157,19 @@ alias yad='yarn add --dev'
 alias yr='yarn remove'
 alias ys='yarn start'
 alias yd='yarn dev'
+
+
+## ----------------------------------------
+##  Anaconda
+## ----------------------------------------
+alias cel='conda env list'
+alias cpl='conda list'  # インストールされているパッケージの確認
+alias cc='conda create -n'  # 仮想環境の作成
+alias ca='conda activate'  # 仮想環境へ移動
+alias cd='conda deactivate'  # 仮想環境からbase環境へ移動
+alias cd='conda search'  # パッケージの確認
+alias ci='conda install'  # パッケージのインストール
+alias cui='conda uninstall'  # パッケージのアンインストール
 
 
 ## ----------------------------------------
