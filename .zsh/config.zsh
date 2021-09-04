@@ -3,6 +3,12 @@ typeset -U path cdpath fpath manpath
 
 
 ## ----------------------------------------
+##  Path
+## ----------------------------------------
+source ~/opt/anaconda3/etc/profile.d/conda.sh
+
+
+## ----------------------------------------
 ##  Editor
 ## ----------------------------------------
 export EDITOR=vim
