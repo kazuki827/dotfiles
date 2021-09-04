@@ -165,6 +165,7 @@ alias yd='yarn dev'
 alias cel='conda env list'
 alias cpl='conda list'  # インストールされているパッケージの確認
 alias cc='conda create -n'  # 仮想環境の作成
+alias cr='conda remove -n --all'  # 仮想環境の削除
 alias ca='conda activate'  # 仮想環境へ移動
 alias cd='conda deactivate'  # 仮想環境からbase環境へ移動
 alias cd='conda search'  # パッケージの確認
