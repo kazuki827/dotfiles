@@ -61,6 +61,7 @@ alias gaa='git add -A'
 alias gc='git commit'
 alias gcm='git commit -m'
 alias gca='git commit --amend'
+alias gcane='git commit --amend --no-edit'  # ステージングした変更点を直前のコミットに含める。
 
 # diff
 alias gd='git diff'
