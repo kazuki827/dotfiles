@@ -10,6 +10,7 @@ alias wh='which'
 alias so='source'
 alias soz='source ~/.zshrc'
 alias relog='exec $SHELL -l'  # shell 再起動
+alias vs='code .'  # shell 再起動
 
 
 ## ----------------------------------------
