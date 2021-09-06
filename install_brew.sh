@@ -14,6 +14,7 @@ brew upgrade --all
 
 formulas=(
     git
+    nodebrew
     ghq
     fzf
     exa

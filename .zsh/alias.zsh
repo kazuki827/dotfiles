@@ -161,6 +161,15 @@ alias yd='yarn dev'
 
 
 ## ----------------------------------------
+##  nodebrew
+## ----------------------------------------
+alias nbl='nodebrew list'
+alias nbu='nodebrew use'
+alias nbi='nodebrew install'
+alias nbui='nodebrew uninstall'
+
+
+## ----------------------------------------
 ##  Anaconda
 ## ----------------------------------------
 alias cel='conda env list'
