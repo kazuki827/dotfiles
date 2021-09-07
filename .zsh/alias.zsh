@@ -138,6 +138,14 @@ alias gsh='git show'
 # @ は HEAD のエイリアス
 # HEAD^^^  =  HEAD~3  =  HEAD~~~  =  HEAD~{3}  =  @^^^
 
+# [ 取り消し系備忘録 ]
+# ローカル変更取り消し(新規追加したファイルに関しては削除されない -> git clean -df)
+# git checkout . 
+
+# 初めての add 取り消し
+# git rm --cached -r . or filename 
+# 2回目以降の add 取り消し
+# git reset HEAD
 
 ## ----------------------------------------
 ##  npm
