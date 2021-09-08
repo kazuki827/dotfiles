@@ -68,7 +68,7 @@ alias gcane='git commit --amend --no-edit'  # ステージングした変更点�
 alias gd='git diff'
 alias gds='git diff --staged'
 
-#log
+#logpy
 alias gl='git log'
 alias glo='git log --oneline'
 alias glg='git log --graph --name-status --pretty=format:"%C(red)%h %C(green)%an %C(Cyan)%ad %Creset%s %C(yellow)%d%Creset"'
@@ -184,7 +184,7 @@ alias nbui='nodebrew uninstall'
 alias cel='conda env list'
 alias cpl='conda list'  # インストールされているパッケージの確認
 alias cec='conda create -n'  # 仮想環境の作成
-alias cer='conda remove -n'  # 仮想環境の削除
+alias cer='conda remove -n'  # 仮想環境の削除(--allつける)
 alias cea='conda activate'  # 仮想環境へ移動
 alias ced='conda deactivate'  # 仮想環境からbase環境へ移動
 alias cps='conda search'  # パッケージの確認
