@@ -107,12 +107,12 @@ alias gpom='git push origin master'
 # stash
 alias gst='git stash'
 alias gsts='git stash save'  # 退避にコメント
-alias gstu='git stash -u'  # untracked fileも含めて変更差分を退避
+alias gstu='git stash -u'    # untracked fileも含めて変更差分を退避
 alias gstl='git stash list'
 alias gsta='git stash apply'
 alias gstp='git stash pop'
 alias gstd='git stash drop'  # stash削除
-alias gstc='git stash clear'  # すべてのstash削除
+alias gstc='git stash clear' # すべてのstash削除
 
 # rebase
 alias gre='git rebase'
@@ -123,7 +123,7 @@ alias grec='git rebase --continue'
 # reset
 alias grta='git reset --mixed HEAD'  # git add 取り消し
 # commit 取り消し
-alias grts='git reset --soft HEAD~'  # HEADだけを元に戻す
+alias grts='git reset --soft HEAD~'   # HEADだけを元に戻す
 alias grtm='git reset --mixed HEAD~'  # HEADとインデックスを元に戻す
 alias grth='git reset --hard HEAD~'  # インデックス、ワーキングツリーも含めて元に戻す
 alias grtc='git reset --hard ORIG_HEAD'  # 直前のリセットを取り消し(c = cancel)
@@ -182,13 +182,13 @@ alias nbui='nodebrew uninstall'
 ##  Anaconda
 ## ----------------------------------------
 alias cel='conda env list'
-alias cpl='conda list'  # インストールされているパッケージの確認
+alias cpl='conda list'       # インストールされているパッケージの確認
 alias cec='conda create -n'  # 仮想環境の作成
 alias cer='conda remove -n'  # 仮想環境の削除(--allつける)
-alias cea='conda activate'  # 仮想環境へ移動
-alias ced='conda deactivate'  # 仮想環境からbase環境へ移動
-alias cps='conda search'  # パッケージの確認
-alias cpi='conda install'  # パッケージのインストール
+alias cea='conda activate'   # 仮想環境へ移動
+alias ced='conda deactivate' # 仮想環境からbase環境へ移動
+alias cps='conda search'     # パッケージの確認
+alias cpi='conda install'    # パッケージのインストール
 alias cpu='conda uninstall'  # パッケージのアンインストール
 
 
