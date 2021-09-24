@@ -101,6 +101,7 @@ alias gmud='git merge upstream/develop'
 
 # push
 alias gp='git push'
+alias gpu='git push -u'
 alias gpo='git push origin'
 alias gpom='git push origin master'
 
