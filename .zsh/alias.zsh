@@ -184,13 +184,14 @@ alias nbui='nodebrew uninstall'
 ## ----------------------------------------
 alias cel='conda env list'
 alias cpl='conda list'             # インストールされているパッケージの確認
-alias cec='conda create -n'        # 仮想環境の作成
+alias cec='conda create -n'        # 仮想環境の作成(-n: --name)
 alias cer='conda remove --all -n'  # 仮想環境の削除
 alias cea='conda activate'         # 仮想環境へ移動
 alias ced='conda deactivate'       # 仮想環境からbase環境へ移動
 alias cps='conda search'           # パッケージの確認
 alias cpi='conda install'          # パッケージのインストール
 alias cpu='conda uninstall'        # パッケージのアンインストール
+alias cca = 'conda clean --all'    # 使われていないパッケージやキャッシュを削除
 
 
 ## ----------------------------------------
