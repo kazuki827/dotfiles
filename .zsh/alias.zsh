@@ -68,7 +68,7 @@ alias gcane='git commit --amend --no-edit'  # ステージングした変更点�
 alias gd='git diff'
 alias gds='git diff --staged'
 
-#logpy
+#log
 alias gl='git log'
 alias glo='git log --oneline'
 alias glg='git log --graph --name-status --pretty=format:"%C(red)%h %C(green)%an %C(Cyan)%ad %Creset%s %C(yellow)%d%Creset"'
