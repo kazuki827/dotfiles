@@ -193,7 +193,7 @@ alias ced='conda deactivate'       # 仮想環境からbase環境へ移動
 alias cps='conda search'           # パッケージの確認
 alias cpi='conda install'          # パッケージのインストール
 alias cpu='conda uninstall'        # パッケージのアンインストール
-alias cca = 'conda clean --all'    # 使われていないパッケージやキャッシュを削除
+alias cca='conda clean --all'      # 使われていないパッケージやキャッシュを削除
 
 
 ## ----------------------------------------
