@@ -108,13 +108,14 @@ alias gdrb='git push --delete origin'  # リモートブランチ削除
 
 # stash
 alias gst='git stash'
-alias gsts='git stash save'   # 退避にコメント
-alias gstu='git stash -u'     # untracked fileも含めて変更差分を退避
+alias gsts='git stash save'    # 退避にコメント
+alias gstu='git stash -u'      # untracked fileも含めて変更差分を退避
 alias gstl='git stash list'
+alias gstd='git stash list -p' # git stash list + git diff
 alias gsta='git stash apply'
 alias gstp='git stash pop'
-alias gstd='git stash drop'   # stash削除
-alias gstc='git stash clear'  # すべてのstash削除
+alias gstd='git stash drop'    # stash削除
+alias gstc='git stash clear'   # すべてのstash削除
 
 # rebase
 alias gre='git rebase'
