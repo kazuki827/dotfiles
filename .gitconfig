@@ -47,3 +47,5 @@
   std = !git stl | xargs git stash drop
 [ghq]
 	root = /Users/matsudakazuki/ghq/src
+[pull]
+	rebase = false
