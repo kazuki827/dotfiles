@@ -189,6 +189,8 @@ alias pi='pip install'
 alias prs='python manage.py runserver'
 alias pmm='python manage.py makemigrations'
 alias pmi='python manage.py migrate'
+alias pfr='pip freeze > requirements.txt'
+alias pir='pip install -r requirements.txt'
 
 
 ## ----------------------------------------
