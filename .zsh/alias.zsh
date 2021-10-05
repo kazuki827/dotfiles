@@ -183,6 +183,15 @@ alias nbui='nodebrew uninstall'
 
 
 ## ----------------------------------------
+##  Python・Django
+## ----------------------------------------
+alias pi='pip install'
+alias prs='python manage.py runserver'
+alias pmm='python manage.py makemigrations'
+alias pmi='python manage.py migrate'
+
+
+## ----------------------------------------
 ##  Anaconda
 ## ----------------------------------------
 alias cel='conda env list'
