@@ -185,6 +185,8 @@ alias nbui='nodebrew uninstall'
 ## ----------------------------------------
 ##  Python・Django
 ## ----------------------------------------
+alias p='python'
+alias pm='python manage.py'
 alias pi='pip install'
 alias prs='python manage.py runserver'
 alias pmm='python manage.py makemigrations'
