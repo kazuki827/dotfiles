@@ -183,6 +183,20 @@ alias nbui='nodebrew uninstall'
 
 
 ## ----------------------------------------
+##  Python・Django
+## ----------------------------------------
+alias p='python'
+alias pm='python manage.py'
+alias pi='pip install'
+alias prs='python manage.py runserver'
+alias pmm='python manage.py makemigrations'
+alias pmi='python manage.py migrate'
+alias pmsql='python manage.py sqlmigrate'  # SQL確認 (ex python manage.py sqlmigrate polls 0001)
+alias pfr='pip freeze > requirements.txt'
+alias pir='pip install -r requirements.txt'
+
+
+## ----------------------------------------
 ##  Anaconda
 ## ----------------------------------------
 alias cel='conda env list'
