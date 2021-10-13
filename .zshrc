@@ -16,3 +16,8 @@ if [ -d $ZSHHOME -a -r $ZSHHOME -a -x $ZSHHOME ]; then
             [ \( -f $i -o -h $i \) -a -r $i ] && . $i
     done
 fi
+
+# brew cask
+# ~/ApplicationsにAppを配置するので、Launchpadなどで出てこなくなる。
+# ~/.zshrcに下の行をを書き込めば、brewcaskのSymlinkは全て/Applicationsに作られる。AppStoreとかと同じ挙動。
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"

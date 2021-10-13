@@ -1,5 +1,7 @@
 #!/bin/sh
+
 cd ~
+
 ## ----------------------------------------
 ##  System Preferences
 ## ----------------------------------------
@@ -80,6 +82,7 @@ mas install 1278508951  #Trello
 echo 'complete: Install App Store Applications by mas-cli'
 
 # install gui app
+# brew install caskroom/cask/brew-cask // 今は自動インストールされるので不要
 casks=(
     dropbox
     google-chrome
@@ -111,9 +114,9 @@ brew install reattach-to-user-namespace
 brew install github/gh/gh
 
 
-#--------------------------------------------------------------#
-##        git clone dotfiles                                  ##
-#--------------------------------------------------------------#
+## ----------------------------------------
+##  Git clone dotfiles
+## ----------------------------------------
 echo 'start: git clone dotfiles'
 git clone https://github.com/kazuki827/dotfiles.git ~/dotfiles
 echo 'complete: git clone dotfiles'
@@ -126,9 +129,11 @@ chmod 755 /usr/local/share/zsh/site-functions
 chmod 755 /usr/local/share/zsh
 zsh
 
-#--------------------------------------------------------------#
-##        set Symbolic Links                                  ##
-#--------------------------------------------------------------#
+## ----------------------------------------
+##  Deploy (set symbolic links)
+## ----------------------------------------
+# 多くのソフトウェアはホームディレクトリにあるドットファイルを設定ファイルとして起動時に読み込む（例：.vimrc）。つまり、ダウンロードした dotfiles リポジトリにあるドットファイルをホームディレクトリにリンクする必要がある。単にファイルをコピーするだけでも同じことだが、シンボリックリンクを貼ることでホームディレクトリにあるドットファイルに追記したり、書き換えたときに自動的に本家（リポジトリでホスティングされているドットファイル）も同期されるため、git push するだけで更新をアップロードすることが出来る。このリンクを貼ることを便宜上、デプロイと呼ぶ。
+# デプロイは各ドットファイル毎に ln -s dotfiles_dotfile homedir_dotfile するのはものすごい手間になるので、デプロイ用にスクリプトファイルなどを用意することが多い。また、このデプロイ用スクリプトは大抵 install.sh や link.sh、setup.sh といった名前でホスティングされている。
 echo 'start: setup Symbolic Links'
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
 ln -sf ~/dotfiles/.zshenv ~/.zshenv
@@ -140,5 +145,12 @@ ln -sf ~/dotfiles/.dein ~/.dein
 ln -sf ~/dotfiles/.ranger/rc.conf ~/.config/ranger
 ln -sf ~/dotfiles/.ranger/rifile.conf ~/.config/ranger
 ln -sf ~/dotfiles/.ranger/scope.sh ~/.config/ranger
+# for f in .??*
+# do
+#     [[ "$f" == ".git" ]] && continue
+#     [[ "$f" == ".DS_Store" ]] && continue
+
+#     echo "$f"
+# done
 source ~/.zshrc
 echo 'complete: setup Symbolic Links'
