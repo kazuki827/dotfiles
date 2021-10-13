@@ -14,6 +14,25 @@ alias vs='code .'
 
 
 ## ----------------------------------------
+##  Homebrew
+## ----------------------------------------
+# 参照
+# https://qiita.com/omega999/items/6f65217b81ad3fffe7e6
+# https://qiita.com/vintersnow/items/fca0be79cdc28bd2f5e4
+# Homebrew では、いわゆるパッケージ名のことを formula と呼ぶ。
+# インストールしたパッケージの実体は /usr/local/Cellar にあり、/usr/local/bin/ や /usr/local/lib/ にシンボリックリンクが作られる。
+alias bs='brew search'
+alias bl='brew list'
+alias bi='brew install'    # インストールされたformulaの一覧を表示
+alias br='brew remove'
+alias bod='brew outdated'  # 更新のあるformulaを見る
+alias bud='brew update'    # Homebrew と formulaの更新
+alias bug='brew upgrade'   # 更新があるformulaを再ビルド
+alias bd='brew doctor'
+alias bc='brew cleanup'    # 古いバージョンのformulaを削除
+
+
+## ----------------------------------------
 ##  git
 ## ----------------------------------------
 # basic
@@ -150,6 +169,7 @@ alias gsh='git show'
 # 2回目以降の add 取り消し
 # git reset HEAD
 
+
 ## ----------------------------------------
 ##  npm
 ## ----------------------------------------
@@ -171,6 +191,7 @@ alias yad='yarn add --dev'
 alias yr='yarn remove'
 alias ys='yarn start'
 alias yd='yarn dev'
+alias yb='yarn build'
 
 
 ## ----------------------------------------
@@ -207,7 +228,7 @@ alias cea='conda activate'         # 仮想環境へ移動
 alias ced='conda deactivate'       # 仮想環境からbase環境へ移動
 alias cps='conda search'           # パッケージの確認
 alias cpi='conda install'          # パッケージのインストール
-alias cpu='conda uninstall'        # パッケージのアンインストール
+alias cpui='conda uninstall'        # パッケージのアンインストール
 alias cca='conda clean --all'      # 使われていないパッケージやキャッシュを削除
 
 
@@ -250,8 +271,8 @@ alias go='git open'
 ## ----------------------------------------
 ##  vim
 ## ----------------------------------------
-alias v='vim'
-alias vi='vim'
+alias v='vim .'
+alias vi='vim .'
 
 
 ## ----------------------------------------

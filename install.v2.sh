@@ -1,15 +1,48 @@
 #!/bin/sh
 cd ~
-#--------------------------------------------------------------#
-##        OS settings                                         ##
-#--------------------------------------------------------------#
-echo 'start: setup os settings'
-defaults write com.apple.finder AppleShowAllFiles TRUE
-echo 'complete: setup os settings'
+## ----------------------------------------
+##  System Preferences
+## ----------------------------------------
+echo 'start: setup System Preferences'
+# ブート時のサウンドを無効化する
+sudo nvram SystemAudioVolume=" "
 
-#--------------------------------------------------------------#
-##        Clean setting files                                 ##
-#--------------------------------------------------------------#
+# 動きを高速化
+defaults write -g com.apple.trackpad.scaling 3 && \
+defaults write -g com.apple.mouse.scaling 1.5 && \
+defaults write -g KeyRepeat -int 1 && \
+defaults write -g InitialKeyRepeat -int 10
+
+# タップしたときクリック
+defaults write -g com.apple.mouse.tapBehavior -int 1
+
+# 三本指でドラッグ
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -bool true && \
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
+
+## スクロールバーを常時表示
+defaults write -g AppleShowScrollBars -string "Always"
+
+# Finder:隠しファイル/フォルダを表示
+defaults write com.apple.finder AppleShowAllFiles tree
+
+# Finder:拡張子を表示
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+## Finder のタイトルバーにフルパスを表示する
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+
+## 名前で並べ替えを選択時にディレクトリを前に置くようにする
+defaults write com.apple.finder _FXSortFoldersFirst -bool true
+
+## ネットを早くする
+networksetup -setdnsservers Wi-Fi 2001:4860:4860::8844 2001:4860:4860::8888 8.8.4.4 8.8.8.8
+echo 'complete: setup System Preferences'
+
+
+## ----------------------------------------
+##  Clean setting files
+## ----------------------------------------
 echo 'start: Clean setting files'
 [ -f ~/.zshrc ] && rm ~/.zshrc
 [ -f ~/.zprofile ] && rm ~/.zprofile
@@ -19,14 +52,43 @@ echo 'start: Clean setting files'
 [ -d ~/.vim ] && rm -r ~/.vim
 echo 'complete: Clean setting files'
 
-#--------------------------------------------------------------#
-##        HomeBrew install                                    ##
-#--------------------------------------------------------------#
+
+## ----------------------------------------
+##  Homebrew
+## ----------------------------------------
 echo 'start: Install HomeBrew'
-/usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
-brew update
-brew doctor
+if [ ! -x "`which brew`" ]; then
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  brew update
+fi
 echo 'complete: Install Homebrew'
+
+# mas-cliのインストール
+echo 'start: Install mas-cli'
+if [ ! -x "`which mas`" ]; then
+  brew install mas
+fi
+echo 'complete: Install mas-cli'
+
+# 先にApple IDでiCloudやAppStoreにログインしておく必要あり。
+echo 'start: Install App Store Applications by mas-cli'
+mas install 539883307   # LINE
+mas install 803453959   # Slack
+mas install 417375580   # BetterSnapTool
+mas install 967805235   # Paste
+mas install 1278508951  #Trello 
+echo 'complete: Install App Store Applications by mas-cli'
+
+# install gui app
+casks=(
+    dropbox
+    google-chrome
+    slack
+    alfred
+    iterm2
+    visual-studio-code
+)
+
 
 echo 'Installing zsh...'
 brew install zsh
@@ -48,26 +110,13 @@ echo 'Installing others...'
 brew install reattach-to-user-namespace
 brew install github/gh/gh
 
-# vimで使うアイコンのフォントたち
-brew tap homebrew/cask-fonts
-brew cask install font-hack-nerd-font
-
-echo 'Installing alacritty...'
-brew cask install alacritty
-[ -d ~/.config/alacritty ] && rm ~/.config/alacritty/alacritty.yml
-
-#--------------------------------------------------------------#
-##       others install                                       ##
-#--------------------------------------------------------------
 
 #--------------------------------------------------------------#
 ##        git clone dotfiles                                  ##
 #--------------------------------------------------------------#
 echo 'start: git clone dotfiles'
-git clone https://github.com/jiroshin/dotfiles.git ~/dotfiles
+git clone https://github.com/kazuki827/dotfiles.git ~/dotfiles
 echo 'complete: git clone dotfiles'
-chmod 755 ~/dotfiles/tmux/tmuxbins/wifi
-chmod 755 ~/dotfiles/tmux/tmuxbins/battery
 
 #--------------------------------------------------------------#
 ##        change shell and start                              ##
@@ -81,14 +130,15 @@ zsh
 ##        set Symbolic Links                                  ##
 #--------------------------------------------------------------#
 echo 'start: setup Symbolic Links'
-ln -s ~/dotfiles/bash/.bash_profile ~/.bash_profile
-ln -s ~/dotfiles/bash/.bashrc ~/.bashrc
-ln -s ~/dotfiles/zsh/.zprofile ~/.zprofile
-ln -s ~/dotfiles/vim/.vim ~/.vim
-ln -s ~/dotfiles/vim/dein ~/dein
-ln -s ~/dotfiles/vim/.vimrc ~/.vimrc
-ln -s ~/dotfiles/tig/.tigrc ~/.tigrc
-ln -s ~/dotfiles/tmux/.tmux.conf ~/.tmux.conf
-ln -s ~/dotfiles/alacritty/alacritty.yml ~/.alacritty.yml
+ln -sf ~/dotfiles/.vimrc ~/.vimrc
+ln -sf ~/dotfiles/.zshenv ~/.zshenv
+ln -sf ~/dotfiles/.zshrc ~/.zshrc
+ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
+ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
+ln -sf ~/dotfiles/.tigrc ~/.tigrc
+ln -sf ~/dotfiles/.dein ~/.dein
+ln -sf ~/dotfiles/.ranger/rc.conf ~/.config/ranger
+ln -sf ~/dotfiles/.ranger/rifile.conf ~/.config/ranger
+ln -sf ~/dotfiles/.ranger/scope.sh ~/.config/ranger
 source ~/.zshrc
 echo 'complete: setup Symbolic Links'

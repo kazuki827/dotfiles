@@ -68,9 +68,6 @@ casks=(
     slack
     alfred
     iterm2
-    atom
-    virtualbox
-    sourcetree
     visual-studio-code
 )
 

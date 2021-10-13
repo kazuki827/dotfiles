@@ -5,7 +5,6 @@ ln -sf ~/dotfiles/.zshrc ~/.zshrc
 ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/.tigrc ~/.tigrc
-ln -sf ~/dotfiles/.dein ~/.dein
 ln -sf ~/dotfiles/.ranger/rc.conf ~/.config/ranger
 ln -sf ~/dotfiles/.ranger/rifile.conf ~/.config/ranger
 ln -sf ~/dotfiles/.ranger/scope.sh ~/.config/ranger
