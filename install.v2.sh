@@ -101,40 +101,25 @@ echo "complete: brew install gui apps"
 
 # install formura
 formulas=(
-    git
-    nodebrew
-    ghq
-    fzf
-    exa
-    wget
-    curl
-    tree
-    openssl
-    z
-    colordiff
-    "--without-etcdir zsh"
-    cask
-    ansible
-    hub
-    node
-    python3
-    lua
-    "vim --with-lua"
-    mysql
-    postgresql
-    sqlite
-    "php55 --homebrew-apxs"
-    httpd22
-    ricty
-    sqlite
-    composer
-    markdown
-    ctags
-    ssh-copy-id
-    phantomjs
-    mecab
-    diff-so-fancy
-    thefuck
+go
+rust
+deno
+mysql
+sqlite
+zsh
+zsh-completions
+git
+nodebrew
+bat
+exa
+fzf
+ghq
+heroku
+heroku-node
+tig
+tmux 
+vim
+ranger
 )
 echo "start: brew install formulas"
 for cask in "${casks[@]}"; do
