@@ -65,6 +65,7 @@ if [ ! -x "`which brew`" ]; then
 fi
 echo 'complete: Install Homebrew'
 
+# install app store app
 # mas-cliのインストール
 echo 'start: Install mas-cli'
 if [ ! -x "`which mas`" ]; then
@@ -78,7 +79,7 @@ mas install 539883307   # LINE
 mas install 803453959   # Slack
 mas install 417375580   # BetterSnapTool
 mas install 967805235   # Paste
-mas install 1278508951  #Trello 
+mas install 1278508951  # Trello 
 echo 'complete: Install App Store Applications by mas-cli'
 
 # install gui app
@@ -90,28 +91,56 @@ casks=(
     alfred
     iterm2
     visual-studio-code
+    docker
 )
+echo "start: brew install gui apps"
+for cask in "${casks[@]}"; do
+    brew cask install $cask
+done
+echo "complete: brew install gui apps"
 
-
-echo 'Installing zsh...'
-brew install zsh
-brew install zsh-completion
-
-echo 'Installing git...'
-brew install git
-
-echo 'Installing openssl...'
-brew install openssl
-
-echo 'Installing ghq...'
-brew install ghq
-
-echo 'Installing fzf...'
-brew install fzf
-
-echo 'Installing others...'
-brew install reattach-to-user-namespace
-brew install github/gh/gh
+# install formura
+formulas=(
+    git
+    nodebrew
+    ghq
+    fzf
+    exa
+    wget
+    curl
+    tree
+    openssl
+    z
+    colordiff
+    "--without-etcdir zsh"
+    cask
+    ansible
+    hub
+    node
+    python3
+    lua
+    "vim --with-lua"
+    mysql
+    postgresql
+    sqlite
+    "php55 --homebrew-apxs"
+    httpd22
+    ricty
+    sqlite
+    composer
+    markdown
+    ctags
+    ssh-copy-id
+    phantomjs
+    mecab
+    diff-so-fancy
+    thefuck
+)
+echo "start: brew install formulas"
+for cask in "${casks[@]}"; do
+    brew cask install $cask
+done
+echo "start: brew install formulas"
 
 
 ## ----------------------------------------
@@ -121,13 +150,6 @@ echo 'start: git clone dotfiles'
 git clone https://github.com/kazuki827/dotfiles.git ~/dotfiles
 echo 'complete: git clone dotfiles'
 
-#--------------------------------------------------------------#
-##        change shell and start                              ##
-#--------------------------------------------------------------#
-ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
-chmod 755 /usr/local/share/zsh/site-functions
-chmod 755 /usr/local/share/zsh
-zsh
 
 ## ----------------------------------------
 ##  Deploy (set symbolic links)
