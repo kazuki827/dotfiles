@@ -84,46 +84,50 @@ echo 'complete: Install App Store Applications by mas-cli'
 
 # install gui app
 # brew install caskroom/cask/brew-cask // 今は自動インストールされるので不要
+# brew cask コマンドは2.6から非推奨になり、2.7から無効化。(brew install --cask ~ を使う)
 casks=(
     dropbox
+    discord 
     google-chrome
     slack
     alfred
     iterm2
     visual-studio-code
+    pycharm
+    phpstorm
     docker
 )
 echo "start: brew install gui apps"
 for cask in "${casks[@]}"; do
-    brew cask install $cask
+    brew install --cask $cask
 done
 echo "complete: brew install gui apps"
 
 # install formura
 formulas=(
-go
-rust
-deno
-mysql
-sqlite
-zsh
-zsh-completions
-git
-nodebrew
-bat
-exa
-fzf
-ghq
-heroku
-heroku-node
-tig
-tmux 
-vim
-ranger
+    go
+    rust
+    deno
+    mysql
+    sqlite
+    zsh
+    zsh-completions
+    git
+    nodebrew
+    bat
+    exa
+    fzf
+    ghq
+    heroku
+    heroku-node
+    tig
+    tmux 
+    vim
+    ranger
 )
 echo "start: brew install formulas"
-for cask in "${casks[@]}"; do
-    brew cask install $cask
+for formula in "${formulas[@]}"; do
+    brew install formula
 done
 echo "start: brew install formulas"
 
