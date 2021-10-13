@@ -23,6 +23,7 @@ alias vs='code .'
 # インストールしたパッケージの実体は /usr/local/Cellar にあり、/usr/local/bin/ や /usr/local/lib/ にシンボリックリンクが作られる。
 alias bs='brew search'
 alias bl='brew list'
+alias bsl='brew services list'
 alias bi='brew install'    # インストールされたformulaの一覧を表示
 alias br='brew remove'
 alias bod='brew outdated'  # 更新のあるformulaを見る
@@ -230,6 +231,17 @@ alias cps='conda search'           # パッケージの確認
 alias cpi='conda install'          # パッケージのインストール
 alias cpui='conda uninstall'        # パッケージのアンインストール
 alias cca='conda clean --all'      # 使われていないパッケージやキャッシュを削除
+
+
+## ----------------------------------------
+##  MongoDB
+## ----------------------------------------
+# インストール方法
+# brew tap mongodb/brew
+# brew install mongodb-community
+alias mstart='brew services start mongodb-community'
+alias mstop='brew services stop mongodb-community'
+alias m='mongo'  # 起動
 
 
 ## ----------------------------------------
