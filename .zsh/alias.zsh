@@ -247,12 +247,13 @@ alias m='mongo'  # 起動
 ## ----------------------------------------
 ##  tmux
 ## ----------------------------------------
-alias tm='tmux'
-alias tml='tmux ls'
-alias tmn='tmux new -s'
-alias tma='tmux a -t'
-alias tmka='tmux kill-server'
-alias tmks='tmux kill-session -t'
+alias tm='tmux'                    # 新規でセッション開始
+alias tmn='tmux new -s'            # 名前をつけて新規でセッション開始
+alias tml='tmux ls'                # セッション一覧
+alias tma='tmux a'                 # 前回のセッションの続きから再開
+alias tmas='tmux a -t'             # 指定したセッションで再開
+alias tmks='tmux kill-session -t'  # 指定したセッションを終了する
+alias tmka='tmux kill-server'      # すべてのセッションが終了。これを実行しない限り、ターミナルを落としてもセッションが生き続ける。
 
 
 ## ----------------------------------------
