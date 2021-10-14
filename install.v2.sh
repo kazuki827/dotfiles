@@ -90,12 +90,14 @@ casks=(
     discord 
     google-chrome
     slack
+    deepl
     alfred
     iterm2
     visual-studio-code
     pycharm
     phpstorm
     docker
+    dbeaver-community
 )
 echo "start: brew install gui apps"
 for cask in "${casks[@]}"; do
