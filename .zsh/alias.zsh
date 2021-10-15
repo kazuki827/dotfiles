@@ -128,14 +128,14 @@ alias gdrb='git push --delete origin'  # リモートブランチ削除
 
 # stash
 alias gst='git stash'
-alias gsts='git stash save'     # 退避にコメント
-alias gstu='git stash -u'       # untracked fileも含めて変更差分を退避
+alias gsts='git stash save'      # 退避にコメント
+alias gstu='git stash -u'        # untracked fileも含めて変更差分を退避
 alias gstl='git stash list'
-alias gstld='git stash list -p' # git stash list + git diff
+alias gstld='git stash list -p'  # git stash list + git diff
 alias gsta='git stash apply'
 alias gstp='git stash pop'
-alias gstd='git stash drop'     # stash削除
-alias gstc='git stash clear'    # すべてのstash削除
+alias gstd='git stash drop'      # stash削除
+alias gstc='git stash clear'     # すべてのstash削除
 
 # rebase
 alias gre='git rebase'
@@ -144,10 +144,8 @@ alias grea='git rebase --abort'
 alias grec='git rebase --continue'
 
 # reset
-alias grta='git reset --mixed HEAD'  # git add 取り消し
-# commit 取り消し
 alias grts='git reset --soft HEAD~'      # HEADだけを元に戻す
-alias grtm='git reset --mixed HEAD~'     # HEADとインデックスを元に戻す
+alias grtm='git reset --mixed HEAD~'     # HEADとインデックスを元に戻す(git add 取り消し)
 alias grth='git reset --hard HEAD~'      # インデックス、ワーキングツリーも含めて元に戻す
 alias grtc='git reset --hard ORIG_HEAD'  # 直前のリセットを取り消し(c = cancel)
 
@@ -172,7 +170,7 @@ alias gsh='git show'
 
 
 ## ----------------------------------------
-##  DB
+##  SQLite3
 ## ----------------------------------------
 alias sq='sqlite3'
 
@@ -235,7 +233,7 @@ alias cea='conda activate'         # 仮想環境へ移動
 alias ced='conda deactivate'       # 仮想環境からbase環境へ移動
 alias cps='conda search'           # パッケージの確認
 alias cpi='conda install'          # パッケージのインストール
-alias cpui='conda uninstall'        # パッケージのアンインストール
+alias cpui='conda uninstall'       # パッケージのアンインストール
 alias cca='conda clean --all'      # 使われていないパッケージやキャッシュを削除
 
 
