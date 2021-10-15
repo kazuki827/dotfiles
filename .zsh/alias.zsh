@@ -304,6 +304,7 @@ alias dc='docker-compose'
 ## ----------------------------------------
 ##  exa
 ## ----------------------------------------
+# https://github.com/ogham/exa
 alias l='exa -l -aa -h -@ -m --icons --git --time-style=long-iso --color=automatic --group-directories-first'
 
 
