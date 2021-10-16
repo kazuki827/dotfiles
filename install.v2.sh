@@ -79,7 +79,7 @@ mas install 539883307   # LINE
 mas install 803453959   # Slack
 mas install 417375580   # BetterSnapTool
 mas install 967805235   # Paste
-mas install 1278508951  # Trello 
+# mas install 1278508951  # Trello 
 echo 'complete: Install App Store Applications by mas-cli'
 
 # install gui app

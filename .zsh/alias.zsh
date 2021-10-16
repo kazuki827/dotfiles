@@ -11,6 +11,7 @@ alias so='source'
 alias soz='source ~/.zshrc'
 alias relog='exec $SHELL -l'  # shell 再起動
 alias vs='code .'
+alias ch='charm .'
 
 
 ## ----------------------------------------
@@ -212,6 +213,7 @@ alias nbui='nodebrew uninstall'
 ##  Python・Django
 ## ----------------------------------------
 alias p='python'
+alias p3='python3'
 alias pm='python manage.py'
 alias pi='pip install'
 alias prs='python manage.py runserver'
