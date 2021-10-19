@@ -127,6 +127,7 @@ alias gpu='git push -u'
 alias gpo='git push origin'
 alias gpom='git push origin master'
 alias gdrb='git push --delete origin'  # リモートブランチ削除
+# git push origin :branch_name でもいい
 
 # stash
 alias gst='git stash'
