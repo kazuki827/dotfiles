@@ -1,0 +1,46 @@
+# tap
+tap "heroku/brew"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "mongodb/brew"
+tap "sanemat/font"
+brew "exa"
+brew "fzf"
+brew "ghq"
+brew "git"
+brew "go"
+brew "mas"
+brew "mysql"
+brew "nodebrew"
+brew "ranger"
+brew "rust"
+brew "tig"
+brew "tmux"
+brew "vim"
+brew "zsh"
+brew "zsh-completions"
+brew "heroku/brew/heroku"
+brew "mongodb/brew/mongodb-community"
+# cask
+cask "font-hackgen"
+cask "font-hackgen-nerd"
+cask "dropbox"
+cask "discord"
+cask "google-chrome"
+cask "slack"
+cask "deepl"
+cask "alfred"
+cask "visual-studio-code"
+cask "pycharm"
+cask "phpstorm"
+cask "docker"
+cask "dbeaver-community"
+# mas
+mas "BetterSnapTool", id: 417375580
+mas "LINE", id: 539883307
+mas "Paste", id: 967805235
+mas "Slack", id: 803453959
+# mas "Trello", id: 1278508951
