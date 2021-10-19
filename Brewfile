@@ -7,6 +7,7 @@ tap "homebrew/core"
 tap "homebrew/services"
 tap "mongodb/brew"
 tap "sanemat/font"
+# brew
 brew "exa"
 brew "fzf"
 brew "ghq"
@@ -43,4 +44,3 @@ mas "BetterSnapTool", id: 417375580
 mas "LINE", id: 539883307
 mas "Paste", id: 967805235
 mas "Slack", id: 803453959
-# mas "Trello", id: 1278508951
