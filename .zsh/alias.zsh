@@ -13,6 +13,7 @@ alias relog='exec $SHELL -l'  # shell 再起動
 alias vs='code .'
 alias ch='charm .'
 alias ps='pstorm .'
+alias dot='cd ~/dotfiles && vs'
 
 
 ## ----------------------------------------
