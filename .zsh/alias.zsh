@@ -219,9 +219,9 @@ alias p='python'
 alias p3='python3'
 alias pm='python manage.py'
 alias pi='pip install'
-alias prs='python manage.py runserver'
-alias pmm='python manage.py makemigrations'
-alias pmi='python manage.py migrate'
+alias pmrs='python manage.py runserver'
+alias pmmm='python manage.py makemigrations'
+alias pmmi='python manage.py migrate'
 alias pmsql='python manage.py sqlmigrate'  # SQL確認 (ex python manage.py sqlmigrate polls 0001)
 alias pfr='pip freeze > requirements.txt'
 alias pir='pip install -r requirements.txt'
@@ -246,6 +246,14 @@ alias cca='conda clean --all'      # 使われていないパッケージやキ�
 ##  Composer
 ## ----------------------------------------
 alias com='composer'
+
+
+## ----------------------------------------
+##  Laravel
+## ----------------------------------------
+alias pa='php artisan'
+alias pamm='php artisan make:migration'
+alias pami='php artisan make:migration'
 
 
 ## ----------------------------------------
