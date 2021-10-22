@@ -233,6 +233,10 @@ alias p='python'
 alias p3='python3'
 alias pi='pip install'
 alias pui='pip uninstall'
+alias pmrs='python manage.py runserver'
+alias pmmm='python manage.py makemigrations'
+alias pmmi='python manage.py migrate'
+alias pmsql='python manage.py sqlmigrate'  # SQL確認 (ex python manage.py sqlmigrate polls 0001)
 alias pfr='pip freeze > requirements.txt'
 alias pir='pip install -r requirements.txt'
 
@@ -285,7 +289,7 @@ alias com='composer'
 ##  Laravel
 ## ----------------------------------------
 alias pa='php artisan'
-alias pammo='php artisan make:model'  # モデル名はテーブル名の単数形にする
+alias pammo='php artisan make:model'      # モデル名はテーブル名の単数形にする
 alias pamc='php artisan make:controller'  # モデル名はテーブル名の単数形にする
 alias pamm='php artisan make:migration'
 alias pami='php artisan migrate'
