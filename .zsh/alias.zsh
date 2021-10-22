@@ -13,7 +13,8 @@ alias relog='exec $SHELL -l'  # shell 再起動
 alias vs='code .'
 alias ch='charm .'
 alias ps='pstorm .'
-alias dot='cd ~/dotfiles && vs'
+alias dot='cd ~/dotfiles'
+alias dotvs='cd ~/dotfiles && vs'
 
 
 ## ----------------------------------------
@@ -180,6 +181,17 @@ alias sq='sqlite3'
 
 
 ## ----------------------------------------
+##  MongoDB
+## ----------------------------------------
+# インストール方法
+# brew tap mongodb/brew
+# brew install mongodb-community
+alias mstart='brew services start mongodb-community'
+alias mstop='brew services stop mongodb-community'
+alias m='mongo'  # 起動
+
+
+## ----------------------------------------
 ##  npm
 ## ----------------------------------------
 alias n='npm'
@@ -189,6 +201,7 @@ alias nui='npm uninstall'
 alias ns='npm run start'
 alias nd='npm run dev'
 alias nb='npm run build'
+alias nl='npm run lint'
 
 
 ## ----------------------------------------
@@ -201,6 +214,7 @@ alias yr='yarn remove'
 alias ys='yarn start'
 alias yd='yarn dev'
 alias yb='yarn build'
+alias yl='yarn lint'
 
 
 ## ----------------------------------------
@@ -213,18 +227,22 @@ alias nbui='nodebrew uninstall'
 
 
 ## ----------------------------------------
-##  Python・Django
+##  Python
 ## ----------------------------------------
 alias p='python'
 alias p3='python3'
-alias pm='python manage.py'
 alias pi='pip install'
-alias prs='python manage.py runserver'
-alias pmm='python manage.py makemigrations'
-alias pmi='python manage.py migrate'
-alias pmsql='python manage.py sqlmigrate'  # SQL確認 (ex python manage.py sqlmigrate polls 0001)
+alias pui='pip uninstall'
 alias pfr='pip freeze > requirements.txt'
 alias pir='pip install -r requirements.txt'
+
+
+## ----------------------------------------
+##  venv
+## ----------------------------------------
+alias venv='python -m venv'           # 仮想環境を作成
+alias act='source venv/bin/activate'  # 仮想環境を有効化
+alias deact='deactivate'              # 仮想環境から抜ける
 
 
 ## ----------------------------------------
@@ -243,20 +261,34 @@ alias cca='conda clean --all'      # 使われていないパッケージやキ�
 
 
 ## ----------------------------------------
+##  Django
+## ----------------------------------------
+alias pm='python manage.py'
+alias pmrs='python manage.py runserver'
+alias pmmm='python manage.py makemigrations'
+alias pmmi='python manage.py migrate'
+alias pmsql='python manage.py sqlmigrate'  # SQL確認 (ex python manage.py sqlmigrate polls 0001)
+
+
+## ----------------------------------------
+##  FastAPI
+## ----------------------------------------
+
+
+## ----------------------------------------
 ##  Composer
 ## ----------------------------------------
 alias com='composer'
 
 
 ## ----------------------------------------
-##  MongoDB
+##  Laravel
 ## ----------------------------------------
-# インストール方法
-# brew tap mongodb/brew
-# brew install mongodb-community
-alias mstart='brew services start mongodb-community'
-alias mstop='brew services stop mongodb-community'
-alias m='mongo'  # 起動
+alias pa='php artisan'
+alias pammo='php artisan make:model'  # モデル名はテーブル名の単数形にする
+alias pamc='php artisan make:controller'  # モデル名はテーブル名の単数形にする
+alias pamm='php artisan make:migration'
+alias pami='php artisan migrate'
 
 
 ## ----------------------------------------
