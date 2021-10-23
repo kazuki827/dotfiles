@@ -28,6 +28,6 @@ gplodaco() {
 # 確認いらないadd commit push
 function acp() {
     git add .
-    git commit -a -m "$1"
+    git commit -a -m "update"
     git push
 }
