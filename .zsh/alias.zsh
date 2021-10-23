@@ -244,7 +244,7 @@ alias pir='pip install -r requirements.txt'
 ## ----------------------------------------
 ##  venv
 ## ----------------------------------------
-alias venv='python -m venv'           # 仮想環境を作成
+alias venv='python3 -m venv'           # 仮想環境を作成
 alias act='source venv/bin/activate'  # 仮想環境を有効化
 alias deact='deactivate'              # 仮想環境から抜ける
 
