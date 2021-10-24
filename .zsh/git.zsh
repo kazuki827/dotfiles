@@ -35,3 +35,7 @@ function acp() {
 function gcm() {
     git commit -m "$1"
 }
+
+function gca() {
+    git commit --amend -m "$1"
+}
