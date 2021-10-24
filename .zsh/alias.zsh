@@ -84,7 +84,7 @@ alias gaa='git add -A'
 
 # commit
 alias gc='git commit'
-alias gcm='git commit -m'
+# alias gcm='git commit -m'
 alias gca='git commit --amend'
 alias gcane='git commit --amend --no-edit'  # ステージングした変更点を直前のコミットに含める。
 
@@ -244,7 +244,7 @@ alias pir='pip install -r requirements.txt'
 ## ----------------------------------------
 ##  venv
 ## ----------------------------------------
-alias venv='python3 -m venv'            # 仮想環境を作成
+alias venv='python3 -m venv venv'       # 仮想環境を作成
 alias venva='source venv/bin/activate'  # 仮想環境を有効化
 alias venvd='deactivate'                # 仮想環境から抜ける
 
