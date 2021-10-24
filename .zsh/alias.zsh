@@ -7,6 +7,7 @@ alias c='clear'
 alias ....='cd ../../'
 alias ......='cd ../../../'
 alias wh='which'
+alias to='touch'
 alias so='source'
 alias soz='source ~/.zshrc'
 alias relog='exec $SHELL -l'  # shell 再起動
@@ -239,6 +240,8 @@ alias p='python'
 alias p3='python3'
 alias pi='pip install'
 alias pui='pip uninstall'
+alias pl='pip list'
+alias pibf='pip install black flake8'
 alias pmrs='python manage.py runserver'
 alias pmmm='python manage.py makemigrations'
 alias pmmi='python manage.py migrate'
@@ -281,8 +284,10 @@ alias pmsql='python manage.py sqlmigrate'  # SQL確認 (ex python manage.py sqlm
 
 
 ## ----------------------------------------
-##  FastAPI
+##  Flask FastAPI
 ## ----------------------------------------
+# uvicorn fastapi_app:app --port ~
+# gunicorn flask_app:app --port ~
 
 
 ## ----------------------------------------
