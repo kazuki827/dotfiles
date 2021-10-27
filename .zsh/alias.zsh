@@ -27,15 +27,34 @@ alias dotvs='cd ~/dotfiles && vs'
 # Homebrew では、いわゆるパッケージ名のことを formula と呼ぶ。
 # インストールしたパッケージの実体は /usr/local/Cellar にあり、/usr/local/bin/ や /usr/local/lib/ にシンボリックリンクが作られる。
 alias bs='brew search'
-alias bl='brew list'
+alias bl='brew list'       # インストールされたformulaの一覧を表示
 alias bsl='brew services list'
-alias bi='brew install'    # インストールされたformulaの一覧を表示
+alias bi='brew install'
 alias br='brew remove'
 alias bod='brew outdated'  # 更新のあるformulaを見る
 alias bud='brew update'    # Homebrew と formulaの更新
 alias bug='brew upgrade'   # 更新があるformulaを再ビルド
 alias bd='brew doctor'
 alias bc='brew cleanup'    # 古いバージョンのformulaを削除
+
+
+## ----------------------------------------
+##  docker
+## ----------------------------------------
+alias d='docker'
+alias dpl='docker pull'
+alias dil='docker image list'          # イメージ一覧
+alias dir='docker rmi'                 # イメージ削除
+alias dcl='docker container list'      # 起動中のコンテナ一覧 (= docker ps)
+alias dcla='docker container list -a'  # 停止中のコンテナも含めすべての一覧を見る
+alias dr='docker run -itd'             # イメージからコンテナを起動 (docker create + docker start)
+alias dcre='docker create'             # イメージからコンテナを作成
+alias dsta='docker start'              # コンテナ起動
+alias dsto='docker stop'               # コンテナ停止
+alias dres='docker restart'            # コンテナ再起動
+alias dcr='docker rm'                  # コンテナ削除
+alias dsp='docker system prune'        # コンテナ、イメージ、ボリューム、ネットワークといった全てのDockerリソースを一括で削除
+alias dc='docker-compose'
 
 
 ## ----------------------------------------
@@ -66,7 +85,7 @@ alias gss='git status -s'
 # branch
 alias gb='git branch'
 alias gba='git branch -a'
-alias gbm='git branch -m'
+alias gbm='git branch -m'  # ブランチ名変更
 alias gbd='git branch -D'
 
 # checkout
@@ -242,10 +261,6 @@ alias pi='pip install'
 alias pui='pip uninstall'
 alias pl='pip list'
 alias pibf='pip install black flake8'
-alias pmrs='python manage.py runserver'
-alias pmmm='python manage.py makemigrations'
-alias pmmi='python manage.py migrate'
-alias pmsql='python manage.py sqlmigrate'  # SQL確認 (ex python manage.py sqlmigrate polls 0001)
 alias pfr='pip freeze > requirements.txt'
 alias pir='pip install -r requirements.txt'
 
@@ -278,9 +293,14 @@ alias cca='conda clean --all'      # 使われていないパッケージやキ�
 ## ----------------------------------------
 alias pm='python manage.py'
 alias pmrs='python manage.py runserver'
-alias pmmm='python manage.py makemigrations'
+alias pmmm='python manage.py makemigrations'   # --name オプションで名前を付けれる
 alias pmmi='python manage.py migrate'
-alias pmsql='python manage.py sqlmigrate'  # SQL確認 (ex python manage.py sqlmigrate polls 0001)
+alias pmsm='python manage.py showmigrations'  # 過去に実行されたマイグレーションのリストを表示
+alias pmsql='python manage.py sqlmigrate'      # SQL確認 (ex python manage.py sqlmigrate polls 0001)
+# マイグレーションを特定の位置まで戻す
+# python manage.py migrate [app name] [マイグレーションの名前]
+# マイグレーションを実施していない状態に戻す
+# python manage.py migrate [app name] zero
 
 
 ## ----------------------------------------
@@ -348,15 +368,6 @@ alias go='git open'
 ## ----------------------------------------
 alias v='vim .'
 alias vi='vim .'
-
-
-## ----------------------------------------
-##  docker
-## ----------------------------------------
-alias d='docker'
-alias dp='docker ps'
-alias dpa='docker ps -a'
-alias dc='docker-compose'
 
 
 ## ----------------------------------------
