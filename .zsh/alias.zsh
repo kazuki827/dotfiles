@@ -44,15 +44,18 @@ alias bc='brew cleanup'    # 古いバージョンのformulaを削除
 alias d='docker'
 alias dpl='docker pull'
 alias dil='docker image list'          # イメージ一覧
-alias dir='docker rmi'                 # イメージ削除
+alias dri='docker rmi'                 # イメージ削除
 alias dcl='docker container list'      # 起動中のコンテナ一覧 (= docker ps)
 alias dcla='docker container list -a'  # 停止中のコンテナも含めすべての一覧を見る
-alias dr='docker run -itd'             # イメージからコンテナを起動 (docker create + docker start)
+alias dr='docker run'                  # イメージからコンテナを起動 (docker pull + docker create + docker start)
+alias drn='docker run --name'          # 名前を付けてイメージからコンテナを起動
+# alias dr='docker run -itd'           # イメージからコンテナを起動 (docker create + docker start)
+alias de='docker exec'                 # 
 alias dcre='docker create'             # イメージからコンテナを作成
 alias dsta='docker start'              # コンテナ起動
 alias dsto='docker stop'               # コンテナ停止
 alias dres='docker restart'            # コンテナ再起動
-alias dcr='docker rm'                  # コンテナ削除
+alias drc='docker rm'                  # コンテナ削除
 alias dsp='docker system prune'        # コンテナ、イメージ、ボリューム、ネットワークといった全てのDockerリソースを一括で削除
 alias dc='docker-compose'
 
