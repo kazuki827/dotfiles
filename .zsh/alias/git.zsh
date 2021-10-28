@@ -106,6 +106,12 @@ alias grei='git rebase -i'
 alias grea='git rebase --abort'
 alias grec='git rebase --continue'
 
+# (p) pick   -> コミットをそのまま残す。
+# (r) reword -> コミットメッセージを変更。
+# (e) edit   -> コミット自体の内容を編集。
+# (s) squash -> 直前のpickを指定したコミットに統合。メッセージも統合。
+# (f) fixup  -> 直前のpickを指定したコミットに統合。メッセージは破棄。
+
 # reset
 alias grts='git reset --soft HEAD~'      # HEADだけを元に戻す
 alias grtm='git reset --mixed HEAD~'     # HEADとインデックスを元に戻す(git add 取り消し)
