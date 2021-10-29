@@ -9,9 +9,23 @@ fi
 
 
 ZSHHOME="${HOME}/dotfiles/.zsh"
+ZSHALISASHOME="${HOME}/dotfiles/.zsh/alias"
+
+# -a -> file が存在すれば真
+# -d -> file が存在し、かつディレクトリならば真
+# -f -> file が存在し、かつ通常ファイルならば真
+# -r -> file が存在し、かつ読み込み可能ならば真
+# -x -> file が存在し、かつ実行可能ならば真
 
 if [ -d $ZSHHOME -a -r $ZSHHOME -a -x $ZSHHOME ]; then
     for i in $ZSHHOME/*; do
+        [[ ${i##*/} = *.zsh ]] &&
+            [ \( -f $i -o -h $i \) -a -r $i ] && . $i
+    done
+fi
+
+if [ -d $ZSHALIASHOME -a -r $ZSHALIASHOME -a -x $ZSHALIASHOME ]; then
+    for i in $ZSHALIASHOME/*; do
         [[ ${i##*/} = *.zsh ]] &&
             [ \( -f $i -o -h $i \) -a -r $i ] && . $i
     done

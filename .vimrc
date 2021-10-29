@@ -99,9 +99,9 @@ let g:airline#extensions#tabline#show_close_button = 0
 "--------------------------------------------------------------
 " color scheme
 "--------------------------------------------------------------
-colorscheme codedark
-Plug 'tomasiser/vim-code-dark'
-let g:airline_theme = 'codedark'
+" colorscheme codedark
+" Plug 'tomasiser/vim-code-dark'
+" let g:airline_theme = 'codedark'
 
 "--------------------------------------------------------------
 " show file tree
