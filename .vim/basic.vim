@@ -10,6 +10,21 @@ set shell=/usr/local/bin/zsh
 " 行番号を表示
 set number
 
+" ファイルを上書きする前にバックアップを作ることを無効化
+set nowritebackup
+
+" ファイルを上書きする前にバックアップを作ることを無効化
+set nobackup
+
+" vim の矩形選択で文字が無くても右へ進める
+set virtualedit=block
+
+" 挿入モードでバックスペースで削除できるようにする
+set backspace=indent,eol,start
+
+" 全角文字専用の設定
+set ambiwidth=double
+
 " VimをなるべくVi互換にするか、便利な機能を使えるようにするかを決定
 set nocompatible
 
@@ -82,20 +97,7 @@ set shiftwidth=2
 "--------------------------------------------------------------
 " string search
 "--------------------------------------------------------------
-"  検索結果をハイライト
-set hlsearch
 
-" インクリメンタルサーチ. １文字入力毎に検索を行う
-set incsearch
-
-" 検索パターンに大文字小文字を区別しない
-set ignorecase
-
-" 検索パターンに大文字を含んでいたら大文字小文字を区別する
-set smartcase
-
-" ESCキー2度押しでハイライトの切り替え
-nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
 
 
 "--------------------------------------------------------------
@@ -112,9 +114,6 @@ nnoremap j gj
 nnoremap k gk
 nnoremap <down> gj
 nnoremap <up> gk
-
-" 挿入モードでバックスペース削除を有効
-set backspace=indent,eol,start
 
 
 "--------------------------------------------------------------
