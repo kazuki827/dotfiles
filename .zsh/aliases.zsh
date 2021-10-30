@@ -49,30 +49,31 @@ alias bc='brew cleanup'    # 古いバージョンのformulaを削除
 ## ----------------------------------------
 # basic
 alias d='docker'
-alias dsp='docker system prune'        # コンテナ、イメージ、ボリューム、ネットワークといった全てのDockerリソースを一括で削除
+alias dsp='docker system prune'           # コンテナ、イメージ、ボリューム、ネットワークといった全てのDockerリソースを一括で削除
 
 # container
 alias dcl='docker container list'         # 起動中のコンテナ一覧 (= docker ps)
 alias dcla='docker container list -a'     # 停止中のコンテナも含めすべての一覧を見る
 alias dcr='docker container run'          # イメージからコンテナを起動 (docker pull + docker create + docker start)
 alias dcrn='docker container run --name'  # 名前を付けてイメージからコンテナを起動
+alias dcrrm='docker container run --rm'   # コンテナをexit後に削除（一回きりのコンテナ）
 # alias dr='docker run -itd'              # イメージからコンテナを起動 (docker create + docker start)
 alias dcex='docker container exec'        # 実行中のコンテナ内でコマンド実行
 alias dccre='docker container create'     # イメージからコンテナを作成
 alias dcsta='docker container start'      # コンテナ起動
 alias dcsto='docker container stop'       # コンテナ停止
 alias dcres='docker container restart'    # コンテナ再起動
-alias dcr='docker container rm'           # コンテナ削除
+alias dcrm='docker container rm'          # コンテナ削除
 alias dcp='docker container prune'        # 停止中のコンテナを削除
 
 #  image
-alias dil='docker image ls'            # イメージ一覧
-alias dipl='docker image pull'         # イメージをレジストリから取得
-alias dipu='docker image push'         # イメージをレジストリに送信
-alias dir='docker image rm'            # イメージ削除
-alias dip='docker image prune'         # 使用していないイメージを削除
-alias dib='docker image build'         # Dockerfileからイメージをビルド
-alias dit='docker image tag'           # イメージを参照する新しいタグを付ける
+alias dil='docker image ls'               # イメージ一覧
+alias dipl='docker image pull'            # イメージをレジストリから取得
+alias dipu='docker image push'            # イメージをレジストリに送信
+alias dirm='docker image rm'              # イメージ削除
+alias dip='docker image prune'            # 使用していないイメージを削除
+alias dib='docker image build'            # Dockerfileからイメージをビルド
+alias dit='docker image tag'              # イメージを参照する新しいタグを付ける
 
 # compose
 alias dc='docker-compose'
