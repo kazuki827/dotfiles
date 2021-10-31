@@ -54,11 +54,12 @@ alias dsp='docker system prune'           # コンテナ、イメージ、ボリ
 # container
 alias dcl='docker container list'         # 起動中のコンテナ一覧 (= docker ps)
 alias dcla='docker container list -a'     # 停止中のコンテナも含めすべての一覧を見る
+alias dclo='docker container logs'        # コンテナのログを表示
 alias dcr='docker container run'          # イメージからコンテナを起動 (docker pull + docker create + docker start)
 alias dcrn='docker container run --name'  # 名前を付けてイメージからコンテナを起動
 alias dcrrm='docker container run --rm'   # コンテナをexit後に削除（一回きりのコンテナ）
 # alias dr='docker run -itd'              # イメージからコンテナを起動 (docker create + docker start)
-alias dcex='docker container exec'        # 実行中のコンテナ内でコマンド実行
+alias dce='docker container exec'        # 実行中のコンテナ内でコマンド実行
 alias dccre='docker container create'     # イメージからコンテナを作成
 alias dcsta='docker container start'      # コンテナ起動
 alias dcsto='docker container stop'       # コンテナ停止
@@ -76,7 +77,7 @@ alias dib='docker image build'            # Dockerfileからイメージをビ�
 alias dit='docker image tag'              # イメージを参照する新しいタグを付ける
 
 # compose
-alias dc='docker-compose'
+alias dcom='docker-compose'
 
 
 ## ----------------------------------------
@@ -221,10 +222,7 @@ alias gsh='git show'
 # 2回目以降の add 取り消し
 # git reset HEAD
 
-
-## ----------------------------------------
-##  Github CLI
-## ----------------------------------------
+# Github CLI
 alias gcl='gh auth login'     # ログイン
 alias gccr=' gh repo create'  # リモートリポジトリを作成
 
