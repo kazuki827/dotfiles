@@ -75,9 +75,12 @@ alias dirm='docker image rm'              # イメージ削除
 alias dip='docker image prune'            # 使用していないイメージを削除
 alias dib='docker image build'            # Dockerfileからイメージをビルド
 alias dit='docker image tag'              # イメージを参照する新しいタグを付ける
+alias dit='docker image inspect'          # イメージの詳細情報を表示
 
 # compose
 alias dcom='docker-compose'
+alias dcomu='docker-compose up'
+alias dcome='docker-compose exec'
 
 
 ## ----------------------------------------
