@@ -59,7 +59,7 @@ alias dcr='docker container run'          # イメージからコンテナを起
 alias dcrn='docker container run --name'  # 名前を付けてイメージからコンテナを起動
 alias dcrrm='docker container run --rm'   # コンテナをexit後に削除（一回きりのコンテナ）
 # alias dr='docker run -itd'              # イメージからコンテナを起動 (docker create + docker start)
-alias dce='docker container exec'        # 実行中のコンテナ内でコマンド実行
+alias dce='docker container exec'         # 実行中のコンテナ内でコマンド実行
 alias dccre='docker container create'     # イメージからコンテナを作成
 alias dcsta='docker container start'      # コンテナ起動
 alias dcsto='docker container stop'       # コンテナ停止
@@ -79,8 +79,10 @@ alias dii='docker image inspect'          # イメージの詳細情報を表示
 
 # compose
 alias dcom='docker-compose'
+alias dcomb='docker-compose build'
 alias dcomu='docker-compose up'
 alias dcome='docker-compose exec'
+alias dcomd='docker-compose down'
 
 
 ## ----------------------------------------
