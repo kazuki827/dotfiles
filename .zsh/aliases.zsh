@@ -78,10 +78,13 @@ alias dit='docker image tag'              # イメージを参照する新しい
 alias dii='docker image inspect'          # イメージの詳細情報を表示
 
 # compose
-alias dcom='docker-compose'
+alias dcom='docker-compose'               
+alias dcomp='docker-compose ps'               
 alias dcomb='docker-compose build'
+alias dcombnc='docker-compose build --no-cache'
 alias dcomu='docker-compose up'
-alias dcome='docker-compose exec'
+alias dcomr='docker-compose run'
+alias dcome='docker-compose exec'         # 実行中のコンテナ内でコマンド実行
 alias dcomd='docker-compose down'
 
 
