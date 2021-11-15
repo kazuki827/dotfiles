@@ -146,6 +146,7 @@ alias gds='git diff --staged'
 #log
 alias gl='git log'
 alias glo='git log --oneline'
+alias glog='git log --oneline --grep='
 alias glg='git log --graph --name-status --pretty=format:"%C(red)%h %C(green)%an %C(Cyan)%ad %Creset%s %C(yellow)%d%Creset"'
 
 # reflog
