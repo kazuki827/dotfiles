@@ -146,6 +146,7 @@ alias gds='git diff --staged'
 #log
 alias gl='git log'
 alias glo='git log --oneline'
+alias glog='git log --oneline --grep='
 alias glg='git log --graph --name-status --pretty=format:"%C(red)%h %C(green)%an %C(Cyan)%ad %Creset%s %C(yellow)%d%Creset"'
 
 # reflog
@@ -206,13 +207,16 @@ alias grec='git rebase --continue'
 # (f) fixup  -> 直前のpickを指定したコミットに統合。メッセージは破棄。
 
 # reset
-alias grts='git reset --soft HEAD~'      # HEADだけを元に戻す
-alias grtm='git reset --mixed HEAD~'     # HEADとインデックスを元に戻す(git add 取り消し)
+alias grts='git reset --soft HEAD~'      # HEADだけを元に戻す(commit 取り消し)
+alias grtm='git reset --mixed HEAD~'     # HEADとインデックスを元に戻す(add 取り消し)
 alias grth='git reset --hard HEAD~'      # インデックス、ワーキングツリーも含めて元に戻す
 alias grtc='git reset --hard ORIG_HEAD'  # 直前のリセットを取り消し(c = cancel)
 
-# git revert <コミット>
+# revert
 alias grev='git revert'
+
+# cherry-pick
+alias gcp='git cherry-pick'
 
 # show
 alias gsh='git show'
