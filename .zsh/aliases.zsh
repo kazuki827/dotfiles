@@ -208,7 +208,7 @@ alias grec='git rebase --continue'
 
 # reset
 alias grts='git reset --soft HEAD~'      # HEADだけを元に戻す(commit 取り消し)
-alias grtm='git reset --mixed HEAD~'     # HEADとインデックスを元に戻す(add 取り消し)
+alias grtm='git reset --mixed HEAD .'    # add 取り消し
 alias grth='git reset --hard HEAD~'      # インデックス、ワーキングツリーも含めて元に戻す
 alias grtc='git reset --hard ORIG_HEAD'  # 直前のリセットを取り消し(c = cancel)
 
