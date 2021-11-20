@@ -296,6 +296,7 @@ alias pl='pip list'
 alias pibf='pip install black flake8'
 alias pfr='pip freeze > requirements.txt'
 alias pir='pip install -r requirements.txt'
+alias pir='pip install -r requirements-dev.txt'
 
 # venv
 alias venv='python3 -m venv venv'       # 仮想環境を作成
