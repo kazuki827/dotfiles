@@ -215,6 +215,10 @@ alias grtc='git reset --hard ORIG_HEAD' # 直前のリセットを取り消し(c
 
 # revert
 alias grev='git revert'
+# 複数commitのrevert
+# https://miau.hatenablog.com/entry/20100709/1278699637
+# https://hiro8blog.com/git/%E8%A4%87%E6%95%B0%E3%82%B3%E3%83%9F%E3%83%83%E3%83%88%E3%82%92%E3%81%BE%E3%81%A8%E3%82%81%E3%81%A6revert%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%E3%80%90git%E3%80%91/
+# https://blog.hotoku.info/2020/11/12/git-revert-range.html
 
 # cherry-pick
 alias gcp='git cherry-pick'
