@@ -275,6 +275,7 @@ alias ns='npm run start'
 alias nd='npm run dev'
 alias nb='npm run build'
 alias nl='npm run lint'
+alias nt='npm run test'
 
 #  yarn
 alias y='yarn'
@@ -285,6 +286,7 @@ alias ys='yarn start'
 alias yd='yarn dev'
 alias yb='yarn build'
 alias yl='yarn lint'
+alias yt='yarn test'
 
 ## ----------------------------------------
 ##  Python
