@@ -6,11 +6,7 @@ typeset -U path cdpath fpath manpath
 ##  Path
 ## ----------------------------------------
 # source ~/opt/anaconda3/etc/profile.d/conda.sh
-# PATH を $PATH:$NODEBREW_DIR/current/bin のように書くと、MacにプリインストールされているNode.jsが優先されることがあるらしい。
-export NODEBREW_DIR="${HOME}/.nodebrew"
-if [ -d "${NODEBREW_DIR}" ]; then
-  export PATH=$NODEBREW_DIR/current/bin:$PATH
-fi
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 
 ## ----------------------------------------
