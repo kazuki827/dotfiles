@@ -9,9 +9,3 @@ mkcd() {
     mkdir -p "$1"
     [ $? -eq 0 ] && cd "$1"
 }
-
-# venvで仮想環境を作り有効化
-# function venv() {
-    # python3 -m venv "$1" && source "$1"/bin/activate
-    # wh python3
-# }
