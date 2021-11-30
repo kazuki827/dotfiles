@@ -372,7 +372,7 @@ alias t='tig'
 alias ghg='ghq get'
 
 # git-open
-alias go='git open'
+# alias go='git open'
 
 #  exa
 # https://github.com/ogham/exa

@@ -15,3 +15,4 @@ fi
 # ~/ApplicationsにAppを配置するので、Launchpadなどで出てこなくなる。
 # ~/.zshrcに下の行をを書き込めば、brewcaskのSymlinkは全て/Applicationsに作られる。AppStoreとかと同じ挙動。
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+[[ -s "/Users/kazukimatsuda/.gvm/scripts/gvm" ]] && source "/Users/kazukimatsuda/.gvm/scripts/gvm"
