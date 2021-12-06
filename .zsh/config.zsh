@@ -7,7 +7,7 @@ typeset -U path cdpath fpath manpath
 ## ----------------------------------------
 # source ~/opt/anaconda3/etc/profile.d/conda.sh
 export PATH=$HOME/.nodebrew/current/bin:$PATH
-
+export PATH="$HOME/.deta/bin:$PATH"
 
 ## ----------------------------------------
 ##  Editor
