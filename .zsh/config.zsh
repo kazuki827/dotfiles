@@ -9,6 +9,13 @@ typeset -U path cdpath fpath manpath
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 export PATH="$HOME/.deta/bin:$PATH"
 
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
+eval "$(goenv init -)"
+export PATH="$GOROOT/bin:$PATH"
+export PATH="$PATH:$GOPATH/bin"
+
+
 ## ----------------------------------------
 ##  Editor
 ## ----------------------------------------
