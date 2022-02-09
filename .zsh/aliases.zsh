@@ -6,6 +6,7 @@ alias path='echo $PATH'
 alias c='clear'
 alias ....='cd ../../'
 alias ......='cd ../../../'
+alias desk='cd ~/desktop'
 alias wh='which'
 alias to='touch'
 alias so='source'
@@ -277,6 +278,7 @@ alias ns='npm run start'
 alias nd='npm run dev'
 alias nb='npm run build'
 alias nl='npm run lint'
+alias nt='npm run test'
 
 #  yarn
 alias y='yarn'
@@ -287,6 +289,7 @@ alias ys='yarn start'
 alias yd='yarn dev'
 alias yb='yarn build'
 alias yl='yarn lint'
+alias yt='yarn test'
 
 ## ----------------------------------------
 ##  Python
@@ -300,7 +303,7 @@ alias pl='pip list'
 alias pibf='pip install black flake8'
 alias pfr='pip freeze > requirements.txt'
 alias pir='pip install -r requirements.txt'
-alias pir='pip install -r requirements-dev.txt'
+alias pird='pip install -r requirements-dev.txt'
 
 # venv
 alias venv='python3 -m venv venv'      # 仮想環境を作成
@@ -372,7 +375,7 @@ alias t='tig'
 alias ghg='ghq get'
 
 # git-open
-alias go='git open'
+alias gop='git open'
 
 #  exa
 # https://github.com/ogham/exa
