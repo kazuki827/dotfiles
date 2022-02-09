@@ -112,7 +112,7 @@ alias gss='git status -s'
 
 # branch
 alias gb='git branch'
-alias gba='git branch -a'
+alias gba='git branch -a' # リモートブランチも表示
 alias gbm='git branch -m' # ブランチ名変更
 alias gbd='git branch -D'
 
@@ -134,6 +134,7 @@ alias gaa='git add -A'
 alias gc='git commit'
 # alias gcm='git commit -m'
 # alias gca='git commit --amend'
+# alias gcam='git commit --amend -m'
 alias gcane='git commit --amend --no-edit' # ステージングした変更点を直前のコミットに含める。
 
 # diff
@@ -177,6 +178,7 @@ alias gp='git push'
 alias gpu='git push -u'
 alias gpo='git push origin'
 alias gpom='git push origin master'
+alias gpod='git push origin develop'
 alias gdrb='git push --delete origin' # リモートブランチ削除
 # git push origin :branch_name でもいい
 

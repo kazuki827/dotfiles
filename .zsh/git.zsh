@@ -1,8 +1,8 @@
 # developブランチのHEADをPullしてきて、新しく作業ブランチを切り替える
 # git pull origin develop and checkout (覚えやすいの他にないかな...)
 gplodaco() {
-    git checkout develop;
-    git pull origin develop;
+    git checkout develop
+    git pull origin develop
     read -p "Input feature branch name: " BRANCH
     git checkout -b ${BRANCH}
 }
@@ -36,6 +36,6 @@ function gcm() {
     git commit -m "$1"
 }
 
-function gca() {
+function gcam() {
     git commit --amend -m "$1"
 }
