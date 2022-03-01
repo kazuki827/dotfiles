@@ -292,6 +292,12 @@ alias yl='yarn lint'
 alias yt='yarn test'
 
 ## ----------------------------------------
+##  Prisma
+## ----------------------------------------
+alias pmd='prisma migrate dev'
+alias pst='prisma studio'
+
+## ----------------------------------------
 ##  Python
 ## ----------------------------------------
 # basic
