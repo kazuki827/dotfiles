@@ -294,8 +294,8 @@ alias yt='yarn test'
 ## ----------------------------------------
 ##  Prisma
 ## ----------------------------------------
-alias pmd='prisma migrate dev'
-alias pst='prisma studio'
+alias pmd='npx prisma migrate dev'
+alias pst='npx prisma studio'
 
 ## ----------------------------------------
 ##  Python
@@ -305,6 +305,7 @@ alias p='python'
 alias p3='python3'
 alias pi='pip install'
 alias pui='pip uninstall'
+
 alias pl='pip list'
 alias pibf='pip install black flake8'
 alias pfr='pip freeze > requirements.txt'
