@@ -298,6 +298,13 @@ alias pmd='npx prisma migrate dev'
 alias pst='npx prisma studio'
 
 ## ----------------------------------------
+##  Rust
+## ----------------------------------------
+alias cr='cargo run'
+alias cc='cargo check'
+alias cb='cargo build'
+
+## ----------------------------------------
 ##  Python
 ## ----------------------------------------
 # basic
