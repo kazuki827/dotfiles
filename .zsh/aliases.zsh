@@ -16,7 +16,7 @@ alias relog='exec $SHELL -l' # shell 再起動
 # editor
 alias vs='code .'
 alias ch='charm .'
-alias ps='pstorm .'
+# alias ps='pstorm .'
 alias v='vim .'
 alias vi='vim .'
 
@@ -249,6 +249,9 @@ alias gccr=' gh repo create' # リモートリポジトリを作成
 ## ----------------------------------------
 ##  Database
 ## ----------------------------------------
+# Postgres
+alias postgres="docker run --name postgres -p 5432:5432 -e POSTGRES_PASSWORD=password -d postgres"
+
 # SQLite3
 alias sq='sqlite3'
 
