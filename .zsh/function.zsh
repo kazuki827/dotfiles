@@ -10,10 +10,10 @@ mkcd() {
     [ $? -eq 0 ] && cd "$1"
 }
 
-port() {
-    sudo lsof -P -i:"$1"
-}
+# port() {
+#     sudo lsof -P -i:"$1"
+# }
 
-kill() {
-    sudo kill -9 "$1"
-}
+# kill() {
+#     sudo kill -9 "$1"
+# }
