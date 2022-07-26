@@ -130,6 +130,7 @@ alias gg='git grep'
 # add
 alias ga='git add'
 alias gaa='git add -A'
+alias gap='git add -p'
 
 # commit
 alias gc='git commit'

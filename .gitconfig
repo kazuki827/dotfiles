@@ -1,6 +1,6 @@
 [user]
-	name = kazuki827
-	email = xm.kazuki827@gmail.com
+	name = matsuda-argano
+	email = matsuda@argano.co.jp
 [core]
 	editor = vim -c \"set fenc=utf-8\"
 	excludesfile = /Users/matsudakazuki/.gitignore_global
